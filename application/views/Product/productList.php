@@ -79,30 +79,32 @@ $image2 = "";
     <!-- breadcrumb -->
     <div id="page-menu" class="no-sticky">
 
-			<div id="page-menu-wrap">
+        <div id="page-menu-wrap">
 
-				<div class="container clearfix">
+            <div class="container clearfix">
 
-					<div class="menu-title">Portfolio <span>Variations</span></div>
+                <div class="menu-title"> <span><?php echo $maincategory ? $maincategory['category_name'] : ""; ?></span></div>
 
-					<nav>
-						<ul>
-							<li class="current"><a href="portfolio.html"><div>With Margin</div></a></li>
-							<li><a href="portfolio-nomargin.html"><div>No Margin</div></a></li>
-							<li><a href="portfolio-notitle.html"><div>No Title</div></a></li>
-							<li><a href="portfolio-title-overlay.html"><div>Title Overlay</div></a></li>
-							<li><a href="portfolio-fullwidth.html"><div>Full Width</div></a></li>
-							<li><a href="portfolio-fullwidth-notitle.html"><div>Full Width - No Title</div></a></li>
-						</ul>
-					</nav>
+                <nav>
+                    <ul>
+                        <?php
+                        foreach ($listcategories as $key => $value) {
+                            ?>
+                        <li><a href="<?php echo site_url("product/productlist/1/".$value['id'])?>"><div><?php echo $value['category_name'];?></div></a></li>
+                            <?php
+                        }
+                        ?>
 
-				<div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
+                    </ul>
+                </nav>
 
-				</div>
+                <div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
 
-			</div>
+            </div>
 
-		</div>
+        </div>
+
+    </div>
     <div class="bg-gray-13 bg-md-transparent">
         <div class="container">
             <!-- breadcrumb -->
@@ -125,7 +127,7 @@ $image2 = "";
     </div>
     <!-- End breadcrumb -->
 
-    <div class="container">
+    <div class="container" style="min-height: 500px">
         <div class="row mb-8">
             <div class="d-none d-xl-block col-xl-3 col-wd-2gdot5">
                 <div class="mb-8 border border-width-2 border-color-3 borders-radius-6">
@@ -180,7 +182,7 @@ $image2 = "";
 
                 </div>
 
-        
+
 
 
             </div>

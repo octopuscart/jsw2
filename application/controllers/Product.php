@@ -44,6 +44,12 @@ class Product extends CI_Controller {
         $this->db->where("parent_id", "0");
         $query = $this->db->get('category');
         $corecategories = $query->result_array();
+        
+        $this->db->where("id", $cat_id);
+        $query = $this->db->get('category');
+        $maincategory = $query->row_array();
+        $data['maincategory'] = $maincategory;
+        $data['listcategories'] = $corecategories;
 
         $products = array();
         $categories2 = array();
