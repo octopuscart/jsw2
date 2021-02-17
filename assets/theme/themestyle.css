@@ -137,20 +137,20 @@
 .hideonmobile{
     display: block;
 }
-@media (min-width: 576px) {
+@media only screen and (max-width: 576px) {
     .hideonmobile{
-        display: none;
+        display: none!important;
     }
 }
 
-@media (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     .hideonmobile{
-        display: none;
+        display: none!important;
     }
 }
 
-@media (min-width: 992px) {
+@media only screen and (max-width: 992px) {
      .hideonmobile{
-        display: none;
+        display: none!important;
     }
 }
