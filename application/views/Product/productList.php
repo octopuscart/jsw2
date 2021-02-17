@@ -90,7 +90,7 @@ $image2 = "";
                         <?php
                         foreach ($listcategories as $key => $value) {
                             ?>
-                        <li><a href="<?php echo site_url("product/productlist/1/".$value['id'])?>"><div><?php echo $value['category_name'];?></div></a></li>
+                            <li><a href="<?php echo site_url("product/productlist/1/" . $value['id']) ?>"><div><?php echo $value['category_name']; ?></div></a></li>
                             <?php
                         }
                         ?>
@@ -164,10 +164,11 @@ $image2 = "";
 
                 <div  class="shop clearfix">
 
-                    <div class="product clearfix col-md-3 item"  ng-repeat="(k, product) in productResults.products">
+                    <div class="product clearfix col-md-3 item text-center"  ng-repeat="(k, product) in productResults.products">
                         <div class="product-image">
                             <a href="#">
-                                <img class="img-fluid product_image_set" src="<?php echo base_url(); ?>assets/images/defaultproduct.png" style="background-image:url(<?php echo PRODUCTIMAGELINK ?>{{product.file_name}});background-size: cover;
+                                <img class="img-fluid product_image_set" src="<?php echo base_url(); ?>assets/images/defaultproduct.png" style="background-image:url(<?php echo PRODUCTIMAGELINK ?>{{product.file_name}});background-size: cover;background-size: contain;
+                                     background-repeat: no-repeat;
                                      background-position: center;"   alt="Image Description"/>                                </a>
 
                             <div class="product-overlay">
