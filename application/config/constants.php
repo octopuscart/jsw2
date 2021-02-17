@@ -27,11 +27,11 @@ switch ($baselink) {
           $adminlinkmain = $baselink . "/shopadmin";
         break;
     default:
-        $adminlinkmain = "https://admin.maharajamart.com/";
+        $adminlinkmain = "https://jswadmin.costcointernational.com/";
 }
 
 define('ADMINURL', $adminlinkmain);
-define('PRODUCTIMAGELINK', "https://demo.costcokart.com/assets/theme2/res/food/");
+define('PRODUCTIMAGELINK', "https://jswadmin.costcointernational.com/assets/product_images/");
 
 
 
