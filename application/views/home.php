@@ -18,7 +18,7 @@ $this->load->view('layout/header');
                 <li data-transition="fade" data-slotamount="13" data-masterspeed="300" data-delay="15000" data-title="INTRODUCTION" >
 
                     <video playsinline webkit-playsinline autoplay muted loop class="fullvideo">
-                        <source src="<?php echo base_url(); ?>assets/sliders/jswvideo2.mp4" type="video/mp4">
+                        <source src="<?php echo base_url(); ?>assets/sliders/jswvideo.mp4" type="video/mp4">
                     </video>
 
 
@@ -27,7 +27,7 @@ $this->load->view('layout/header');
 
 
                 <!-- SLIDE  -->
-                <li class="hideonmobile" data-transition="slideup" data-slotamount="1" data-masterspeed="1500" data-delay="5000"  data-saveperformance="off"  data-title="HOME APPLIANCES" style="background:url(<?php echo base_url(); ?>assets/sliders/slide2.jpg)">
+                <li data-transition="slideup" data-slotamount="1" data-masterspeed="1500" data-delay="5000"  data-saveperformance="off"  data-title="HOME APPLIANCES" style="background:url(<?php echo base_url(); ?>assets/sliders/slide2.jpg)">
                     <!-- LAYERS -->
 
 
@@ -94,7 +94,7 @@ $this->load->view('layout/header');
 
                 </li>
 
-                <li class="hideonmobile" data-transition="slideup" data-slotamount="1" data-masterspeed="1500" data-delay="5000"  data-saveperformance="off"  data-title="JSW Speakers" style="background:url(<?php echo base_url(); ?>assets/sliders/slide3.jpg)">
+                <li data-transition="slideup" data-slotamount="1" data-masterspeed="1500" data-delay="5000"  data-saveperformance="off"  data-title="JSW Speakers" style="background:url(<?php echo base_url(); ?>assets/sliders/slide3.jpg)">
                     <!-- LAYERS -->
 
                     <div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase hideonmobile"
