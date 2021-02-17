@@ -133,3 +133,24 @@
     width: 25%;
     /*border-right: 1px solid #000;*/
 }
+
+.hideonmobile{
+    display: block;
+}
+@media (min-width: 576px) {
+    .hideonmobile{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hideonmobile{
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+     .hideonmobile{
+        display: none;
+    }
+}

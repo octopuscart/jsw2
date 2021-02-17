@@ -27,12 +27,12 @@ $this->load->view('layout/header');
 
 
                 <!-- SLIDE  -->
-                <li data-transition="slideup" data-slotamount="1" data-masterspeed="1500" data-delay="5000"  data-saveperformance="off"  data-title="HOME APPLIANCES" style="background:url(<?php echo base_url(); ?>assets/sliders/slide2.jpg)">
+                <li class="hideonmobile" data-transition="slideup" data-slotamount="1" data-masterspeed="1500" data-delay="5000"  data-saveperformance="off"  data-title="HOME APPLIANCES" style="background:url(<?php echo base_url(); ?>assets/sliders/slide2.jpg)">
                     <!-- LAYERS -->
 
 
                     <!-- LAYER NR. 2 -->
-                    <div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase"
+                    <div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase hideonmobile"
                          data-x="0"
                          data-y="50"
                          data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1.3;scaleY:1;skewX:0;skewY:0;opacity:0;s:700;e:Power4.easeOutQuad;"
@@ -46,7 +46,7 @@ $this->load->view('layout/header');
                          data-endspeed="1000"
                          data-endeasing="Power4.easeIn" style=" color: #333;">We always think ahead of time.</div>
 
-                    <div class="tp-caption ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
+                    <div class="tp-caption ltl tp-resizeme revo-slider-emphasis-text nopadding noborder hideonmobile"
                          data-x="0"
                          data-y="80"
                          data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1.3;scaleY:1;skewX:0;skewY:0;opacity:0;s:700;e:Power4.easeOutQuad;"
@@ -61,7 +61,7 @@ $this->load->view('layout/header');
                          data-endeasing="Power4.easeIn" style=" color: #333; line-height:38px;font-size: 38px">
                         DREAM HOME APPLIANCES</div>
 
-                    <div class="tp-caption ltl tp-resizeme revo-slider-desc-text tleft"
+                    <div class="tp-caption ltl tp-resizeme revo-slider-desc-text tleft hideonmobile"
                          data-x="0"
                          data-y="130"
                          data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1.3;scaleY:1;skewX:0;skewY:0;opacity:0;s:700;e:Power4.easeOutQuad;"
@@ -75,7 +75,7 @@ $this->load->view('layout/header');
                          data-endspeed="1000"
                          data-endeasing="Power4.easeIn" style=" color: #333; max-width: 550px; white-space: normal;">JSW is an all-in-one store, bringing you premium variety of home appliances to meet all your demands with no compromise on your comfort! </div>
 
-                    <div class="tp-caption ltl tp-resizeme"
+                    <div class="tp-caption ltl tp-resizeme hideonmobile"
                          data-x="0"
                          data-y="230"
                          data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1.3;scaleY:1;skewX:0;skewY:0;opacity:0;s:700;e:Power4.easeOutQuad;"
@@ -94,10 +94,10 @@ $this->load->view('layout/header');
 
                 </li>
 
-                <li data-transition="slideup" data-slotamount="1" data-masterspeed="1500" data-delay="5000"  data-saveperformance="off"  data-title="JSW Speakers" style="background:url(<?php echo base_url(); ?>assets/sliders/slide3.jpg)">
+                <li class="hideonmobile" data-transition="slideup" data-slotamount="1" data-masterspeed="1500" data-delay="5000"  data-saveperformance="off"  data-title="JSW Speakers" style="background:url(<?php echo base_url(); ?>assets/sliders/slide3.jpg)">
                     <!-- LAYERS -->
 
-                    <div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase"
+                    <div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase hideonmobile"
                          data-x="630"
                          data-y="110"
                          data-transform_in="x:250;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;s:400;e:Power4.easeOutQuad;"
@@ -112,7 +112,7 @@ $this->load->view('layout/header');
                          data-endeasing="Power4.easeIn" style=""><img src="<?php echo base_url(); ?>assets/sliders/slide3_1.png" alt="Bag"></div>
 
                     <!-- LAYER NR. 2 -->
-                    <div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase"
+                    <div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase hideonmobile"
                          data-x="0"
                          data-y="160"
                          data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1.3;scaleY:1;skewX:0;skewY:0;opacity:0;s:700;e:Power4.easeOutQuad;"
@@ -126,7 +126,7 @@ $this->load->view('layout/header');
                          data-endspeed="1000"
                          data-endeasing="Power4.easeIn" style=" color: #fff;">Enjoy the good vibes of sensational music.</div>
 
-                    <div class="tp-caption ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
+                    <div class="tp-caption ltl tp-resizeme revo-slider-emphasis-text nopadding noborder hideonmobile"
                          data-x="0"
                          data-y="220"
                          data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1.3;scaleY:1;skewX:0;skewY:0;opacity:0;s:700;e:Power4.easeOutQuad;"
@@ -140,7 +140,7 @@ $this->load->view('layout/header');
                          data-endspeed="1000"
                          data-endeasing="Power4.easeIn" style=" color: #fff; line-height: 1.15;">JSW Speakers</div>
 
-                    <div class="tp-caption ltl tp-resizeme revo-slider-desc-text tleft"
+                    <div class="tp-caption ltl tp-resizeme revo-slider-desc-text tleft hideonmobile"
                          data-x="0"
                          data-y="320"
                          data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1.3;scaleY:1;skewX:0;skewY:0;opacity:0;s:700;e:Power4.easeOutQuad;"
@@ -232,7 +232,7 @@ $this->load->view('layout/header');
                         <li>
                             <a href="#">
                                 <img src="<?php echo base_url(); ?>assets/categoryblock/<?php echo $value['img']; ?>" alt="JSW <?php echo $value['title']; ?>">
-                                <h3><?php echo $value['title']; ?></h3>
+                                <h3 class="hideonmobile"><?php echo $value['title']; ?></h3>
                             </a>
                         </li>
                         <?php
