@@ -6,11 +6,10 @@ $this->load->view('layout/header');
 <section id="page-title">
 
     <div class="container clearfix">
-        <h1>Pink Printed Dress</h1>
+        <h1><?php echo $product_details['title']; ?></h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Shop</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Shop Single</li>
+            <li class="breadcrumb-item"><a href="#"><?php echo $product_details['title']; ?></a></li>
         </ol>
     </div>
 
@@ -36,7 +35,11 @@ $this->load->view('layout/header');
                             <div class="fslider" data-pagi="false" data-arrows="false" data-thumbs="true">
                                 <div class="flexslider">
                                     <div class="slider-wrap" data-lightbox="gallery">
-                                        <div class="slide" data-thumb="<?php echo PRODUCTIMAGELINK . $product_details['file_name']; ?>"><a href="images/shop/dress/3.jpg" title="Pink Printed Dress - Front View" data-lightbox="gallery-item"><img src="images/shop/dress/3.jpg" alt="Pink Printed Dress"></a></div>
+                                        <div class="slide" data-thumb="<?php echo PRODUCTIMAGELINK . $product_details['file_name']; ?>">
+                                            <a href="<?php echo PRODUCTIMAGELINK . $product_details['file_name']; ?>" title="<?php echo $product_details['title']; ?>" data-lightbox="gallery-item">
+                                                <img src="<?php echo PRODUCTIMAGELINK . $product_details['file_name']; ?>" alt="<?php echo $product_details['title']; ?>">
+                                            </a>
+                                        </div>
 
                                     </div>
                                 </div>
