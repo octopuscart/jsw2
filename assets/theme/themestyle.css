@@ -1,0 +1,128 @@
+.mobilelogo{
+    padding: 30px 0px;
+}
+
+.mobilelogo img{
+    height: 40px!important;
+}
+
+.desktoplogo {
+    padding: 10px 0px;
+}
+
+.desktoplogo img{
+    height: 40px!important;
+}
+
+
+#primary-menu ul li > a {
+    display: block;
+    line-height: 22px;
+    padding: 20px 15px;
+}
+
+#top-search, #top-cart, #side-panel-trigger, #top-account {
+    float: right;
+    margin: 20px 0 20px 15px;
+}
+
+#header, #header-wrap, #logo {
+    height: auto!important;
+}
+
+
+.blankspace{
+    margin: 0px 15px;
+
+}
+.fullvideo{
+    width:100%;
+}
+
+.homeblock.product-title h3{
+    line-height:  15px;
+
+}
+
+.homeblock.product-title a{
+    font-size: 15px;
+}
+
+.overflowtext{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.categorylist img{
+
+    /*border-radius: 50%;*/
+    /*border: 1px solid #000;*/
+    height:100px!important;
+    width:100px!important;
+
+}
+
+.categorylist h3{
+    font-size: 13px;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 0px;
+}
+
+
+.mt-40{
+    margin-top: 40px;
+}
+
+.clients-grid li a {
+    opacity:1;
+}
+
+#top-bar{
+    background: #007bff;
+    color: white;
+}
+
+#copyrights {
+    padding: 9px 0 0px 0px!important;
+    background-color: #007bff!important;
+    color: #ffff!important;;
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 10%);
+}
+
+.dark #footer .social-icon.si-borderless, #footer.dark .social-icon.si-borderless {
+    color: #fff!important;
+}
+
+.content-wrap {
+    position: relative;
+    padding: 10px 0;
+}
+
+.top-links li > a {
+    display: block;
+    padding: 0 12px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 44px;
+    color: #fff;
+}
+
+.btn-orange {
+    color: #fff;
+    background-color: #fd5f14!important;
+    border-color: #fd5f14!important;;
+}
+
+#page-menu-wrap {
+    z-index: 99;
+    background-color: #7a7a7a;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+}
