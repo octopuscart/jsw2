@@ -158,7 +158,7 @@ $image2 = "";
                 </div>
 
             </div>
-            <div class="col-xl-9 col-wd-9gdot5">
+            <div class="col-xl-9 col-wd-9gdot5 listproduct">
 
 
 
