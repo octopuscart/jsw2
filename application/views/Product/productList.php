@@ -178,6 +178,8 @@ $image2 = "";
                         </div>
                         <div class="product-desc">
                             <div class="homeblock product-title overflowtext"><h3 ><a href="#">{{product.title}}</a></h3></div>
+                            <div class="homeblock product-title overflowtext"><h3 ><a href="#">{{product.short_description}}</a></h3></div>
+
                         </div>
                     </div>
 
