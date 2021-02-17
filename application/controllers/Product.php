@@ -44,7 +44,7 @@ class Product extends CI_Controller {
         $this->db->where("parent_id", "0");
         $query = $this->db->get('category');
         $corecategories = $query->result_array();
-        
+
         $this->db->where("id", $cat_id);
         $query = $this->db->get('category');
         $maincategory = $query->row_array();
@@ -97,26 +97,13 @@ class Product extends CI_Controller {
     function ProductDetails($product_id) {
         $prodct_details = $this->Product_model->productDetails($product_id);
         if ($prodct_details) {
-            $prodct_details_attrs = $this->Product_model->productDetailsVariants($product_id);
 
-            $data['product_attr_variant'] = $prodct_details_attrs;
-
-            $pquery = "SELECT pa.attribute, cav.attribute_value FROM product_attribute as pa
-      join category_attribute_value as cav on cav.id = pa.attribute_value_id
-      where pa.product_id = $product_id";
-            $attr_products = $this->Product_model->query_exe($pquery);
-            $data["product_attr"] = $attr_products;
-            $categorie_parent = $this->Product_model->getparent($prodct_details['category_id']);
-            $data["categorie_parent"] = $categorie_parent;
-            $data["product_details"] = $prodct_details;
-
-
-            $pquery = "SELECT pa.* FROM product_related as pr 
-      join products as pa on pa.id = pr.related_product_id
-      where pr.product_id = $product_id";
-            $product_related = $this->Product_model->query_exe($pquery);
+            $this->db->where("category_id", $prodct_details['category_id']);
+            $querys = $this->db->get("products");
+            $product_related = $querys->result_array();
 
             $data["product_related"] = $product_related;
+            $data["product_details"] = $prodct_details;
 
             $this->config->load('seo_config');
             $this->config->set_item('seo_title', $prodct_details['title']);
@@ -142,16 +129,16 @@ class Product extends CI_Controller {
         $this->session->unset_userdata('session_cart');
     }
 
-    function productDetailsView($product_id=1, $attr = 1) {
+    function productDetailsView($product_id = 1, $attr = 1) {
         $testproduct = $this->Product_model->testProducts();
         $data['product'] = $testproduct[$product_id];
         $data['attrselect'] = $attr;
         $data['product_id'] = $product_id;
         $this->load->view('Product/productDetails', $data);
     }
-    
+
     function ProductListView() {
-         $testproduct = $this->Product_model->testProducts();
+        $testproduct = $this->Product_model->testProducts();
         $data['products'] = $testproduct;
         $this->load->view('Product/productListPrice', $data);
     }

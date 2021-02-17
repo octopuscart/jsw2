@@ -1,251 +1,223 @@
 <?php
 $this->load->view('layout/header');
 ?>
-<style>
-    .u-slick--slider-syncing .slick-slide.slick-current {
-        border-bottom-width: 1px;
-        border-bottom-color: #ffffff;
-    }
-    .veriationbutton{
-        margin-right: 10px;
-    }
-</style>
+<!-- Page Title
+                ============================================= -->
+<section id="page-title">
 
-<!-- ========== MAIN CONTENT ========== -->
-<main id="content" role="main" ng-controller="productDetailsController">
-    <!-- breadcrumb -->
-    <div class="bg-gray-13 bg-md-transparent">
-        <div class="container">
-            <!-- breadcrumb -->
-            <div class="my-md-3">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-3 flex-nowrap flex-xl-wrap overflow-auto overflow-xl-visble">
-                        <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a href="../home/index.html">Home</a></li>
-                        <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a href="../shop/shop.html"><?php echo $product_details['title']; ?></a></li>
-                    </ol>
-                </nav>
-            </div>
-            <!-- End breadcrumb -->
-        </div>
+    <div class="container clearfix">
+        <h1>Pink Printed Dress</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Shop</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Shop Single</li>
+        </ol>
     </div>
-    <!-- End breadcrumb -->
 
-    <div class="container">
+</section><!-- #page-title end -->
 
+<!-- Content
+============================================= -->
+<section id="content">
 
-        <!-- Single Product Body -->
-        <div class="mb-xl-14 mb-6">
-            <div class="row">
+    <div class="content-wrap">
 
+        <div class="container clearfix">
 
-                <div class="col-md-5 mb-4 mb-md-0" >
-                    <div id="sliderSyncingNav" class="js-slick-carousel u-slick mb-2"
-                         data-infinite="true"
-                         data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-classic u-slick__arrow-centered--y rounded-circle"
-                         data-arrow-left-classes="fas fa-arrow-left u-slick__arrow-classic-inner u-slick__arrow-classic-inner--left ml-lg-2 ml-xl-4"
-                         data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-classic-inner u-slick__arrow-classic-inner--right mr-lg-2 mr-xl-4"
-                         data-nav-for="#sliderSyncingThumb">
-                      
-                            <div class="js-slide">
-                                <img class="img-fluid" src="<?php echo PRODUCTIMAGELINK. $product_details['file_name']; ?>" alt="Image Description">
+            <div class="single-product">
+
+                <div class="product">
+
+                    <div class="col_two_fifth">
+
+                        <!-- Product Single - Gallery
+                        ============================================= -->
+                        <div class="product-image">
+                            <div class="fslider" data-pagi="false" data-arrows="false" data-thumbs="true">
+                                <div class="flexslider">
+                                    <div class="slider-wrap" data-lightbox="gallery">
+                                        <div class="slide" data-thumb="<?php echo PRODUCTIMAGELINK . $product_details['file_name']; ?>"><a href="images/shop/dress/3.jpg" title="Pink Printed Dress - Front View" data-lightbox="gallery-item"><img src="images/shop/dress/3.jpg" alt="Pink Printed Dress"></a></div>
+
+                                    </div>
+                                </div>
                             </div>
-                        
+                            <div class="sale-flash">Sale!</div>
+                        </div><!-- Product Single - Gallery End -->
+
                     </div>
 
+                    <div class="col_two_fifth product-desc">
 
-                </div>
+                        <!-- Product Single - Price
+                        ============================================= -->
+                        <div class="product-price"><?php echo $product_details['title']; ?></div><!-- Product Single - Price End -->
 
-                <div class="col-md-7 mb-md-6 mb-lg-0">
-                    <div class="mb-2">
-                        <div class="border-bottom mb-3 pb-md-1 pb-3">
-                            <h2 class="font-size-25 text-lh-1dot2"><?php echo $product_details['title']; ?></h2>
-                            <div class="mb-2">
-                                <a class="d-inline-flex align-items-center small font-size-15 text-lh-1" href="#">
-                                    <div class="text-warning mr-2">
-                                        <small class="fas fa-star"></small>
-                                        <small class="fas fa-star"></small>
-                                        <small class="fas fa-star"></small>
-                                        <small class="fas fa-star"></small>
-                                        <small class="far fa-star text-muted"></small>
-                                    </div>
+                        <!-- Product Single - Rating
+                        ============================================= -->
+                        <div class="product-rating">
+                            <i class="icon-star3"></i>
+                            <i class="icon-star3"></i>
+                            <i class="icon-star3"></i>
+                            <i class="icon-star-half-full"></i>
+                            <i class="icon-star-empty"></i>
+                        </div><!-- Product Single - Rating End -->
 
+                        <div class="clear"></div>
+                        <div class="line"></div>
+
+                        <!-- Product Single - Quantity & Cart Button
+                        ============================================= -->
+                        <form class="cart nobottommargin clearfix" method="post" enctype='multipart/form-data'>
+                            <div class="quantity clearfix">
+                                <input type="button" value="-" class="minus">
+                                <input type="text" step="1" min="1"  name="quantity" value="1" title="Qty" class="qty" size="4" />
+                                <input type="button" value="+" class="plus">
+                            </div>
+                            <button type="submit" class="add-to-cart button nomargin">Enquiry</button>
+                        </form><!-- Product Single - Quantity & Cart Button End -->
+
+                        <div class="clear"></div>
+                        <div class="line"></div>
+
+                        <!-- Product Single - Short Description
+                        ============================================= -->
+                        <p style="white-space: pre-line"><?php echo $product_details['description']; ?></p>
+
+
+                        <!-- Product Single - Meta
+                        ============================================= -->
+                        <div class="card product-meta">
+                            <div class="card-body">
+                                <span itemprop="productID" class="sku_wrapper">SKU: <span class="sku"><?php echo $product_details['short_description']; ?></span></span>
+<!--                                <span class="posted_in">Category: <a href="#" rel="tag">Dress</a>.</span>
+                                <span class="tagged_as">Tags: <a href="#" rel="tag">Pink</a>, <a href="#" rel="tag">Short</a>, <a href="#" rel="tag">Dress</a>, <a href="#" rel="tag">Printed</a>.</span>-->
+                            </div>
+                        </div><!-- Product Single - Meta End -->
+
+                        <!-- Product Single - Share
+                        ============================================= -->
+                        <div class="si-share noborder clearfix">
+                            <span>Share:</span>
+                            <div>
+                                <a href="#" class="social-icon si-borderless si-facebook">
+                                    <i class="icon-facebook"></i>
+                                    <i class="icon-facebook"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-twitter">
+                                    <i class="icon-twitter"></i>
+                                    <i class="icon-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-pinterest">
+                                    <i class="icon-pinterest"></i>
+                                    <i class="icon-pinterest"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-gplus">
+                                    <i class="icon-gplus"></i>
+                                    <i class="icon-gplus"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-rss">
+                                    <i class="icon-rss"></i>
+                                    <i class="icon-rss"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-email3">
+                                    <i class="icon-email3"></i>
+                                    <i class="icon-email3"></i>
                                 </a>
                             </div>
-                            <div class="d-md-flex align-items-center">
-                                <div class="ml-md-3 text-gray-9 font-size-14">Availability: <span class="text-green font-weight-bold">In stock</span></div>
-                            </div>
-                        </div>
-                        <div class="flex-horizontal-center flex-wrap mb-4">
-                            <a href="#" class="text-gray-6 font-size-13 mr-2"><i class="ec ec-favorites mr-1 font-size-15"></i> Wishlist</a>
-                            <a href="#" class="text-gray-6 font-size-13 ml-2"><i class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                        </div>
-                        <div class="mb-2">
-                            <div class="font-size-14 pl-3 ml-1 text-gray-110" style="white-space: pre-line;">
-                                <?php
-                                echo $product_details['description'];
-                                ?>
-                            </div>
-                        </div>
-                        <p><strong>SKU</strong>: <?php echo $product_details['short_description']; ?></p>
+                        </div><!-- Product Single - Share End -->
 
-                        <div class="border-top border-bottom py-3 mb-4">
-                            <div class="d-flex align-items-center">
-
-                                <!-- Select -->
-                                <div class="row">
-                                   
-                                  
-                                </div>
-                                <!-- End Select -->
-                            </div>
-                        </div>
-                        <div class="d-md-flex align-items-end mb-3">
-                            <div class="max-width-150 mb-4 mb-md-0">
-                                <h6 class="font-size-14">MOQ</h6>
-                                <!-- Quantity -->
-                                <div class="border rounded-pill py-2 px-3 border-color-1">
-                                    <div class="js-quantity row align-items-center">
-                                        <div class="col">
-                                        </div>
-                                        <div class="col-auto pr-1">
-                                            <a class="js-minus btn btn-icon btn-xs btn-outline-secondary rounded-circle border-0" href="javascript:;">
-                                                <small class="fas fa-minus btn-icon__inner"></small>
-                                            </a>
-                                            <a class="js-plus btn btn-icon btn-xs btn-outline-secondary rounded-circle border-0" href="javascript:;">
-                                                <small class="fas fa-plus btn-icon__inner"></small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Quantity -->
-                            </div>
-                            <div class="ml-md-3">
-                                <a href="#" class="btn px-5 btn-primary-dark transition-3d-hover"  data-toggle="modal" data-target="#productInquire
-                                   "><i class="ec ec-add-to-cart mr-2 font-size-20"></i> Inquire</a>
-                            </div>
-                        </div>
                     </div>
+
+                    <div class="col_one_fifth col_last">
+
+
+                        <div class="divider divider-center"><i class="icon-circle-blank"></i></div>
+
+                        <div class="feature-box fbox-plain fbox-dark fbox-small">
+                            <div class="fbox-icon">
+                                <i class="icon-thumbs-up2"></i>
+                            </div>
+                            <h3>100% Original</h3>
+                            <p class="notopmargin">We guarantee you the sale of Original Brands.</p>
+                        </div>
+
+                        <div class="feature-box fbox-plain fbox-dark fbox-small">
+                            <div class="fbox-icon">
+                                <i class="icon-credit-cards"></i>
+                            </div>
+                            <h3>Payment Options</h3>
+                            <p class="notopmargin">We accept Visa, MasterCard and American Express.</p>
+                        </div>
+
+                        <div class="feature-box fbox-plain fbox-dark fbox-small">
+                            <div class="fbox-icon">
+                                <i class="icon-truck2"></i>
+                            </div>
+                            <h3>Free Shipping</h3>
+                            <p class="notopmargin">Free Delivery to 100+ Locations on orders above $40.</p>
+                        </div>
+
+                        <div class="feature-box fbox-plain fbox-dark fbox-small">
+                            <div class="fbox-icon">
+                                <i class="icon-undo"></i>
+                            </div>
+                            <h3>30-Days Returns</h3>
+                            <p class="notopmargin">Return or exchange items purchased within 30 days.</p>
+                        </div>
+
+                    </div>
+
+
+
                 </div>
+
             </div>
-        </div>
-        <!-- End Single Product Body -->
 
+            <div class="clear"></div><div class="line"></div>
 
+            <div class="col_full nobottommargin">
 
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="productInquire" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <form class="js-validate" novalidate="novalidate">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Product Inquiry</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="product-item__outer h-100">
-                            <div class="product-item__inner p-md-3 row no-gutters">
-                                <div class="col col-lg-auto product-media-left">
-                                    <a href="#" class="max-width-150 d-block"><img class="img-fluid" src="<?php echo base_url(); ?>assets/theme2/images/testproduct/<?php echo $product['img'][0]; ?>" style="    height: 80px;" alt="Image Description"></a>
+                <h4>Related Products</h4>
+
+                <div id="oc-product" class="owl-carousel product-carousel carousel-widget" data-margin="30" data-pagi="false" data-autoplay="5000" data-items-xs="1" data-items-md="2" data-items-lg="3" data-items-xl="4">
+                    <?php
+                    foreach ($product_related as $key => $value) {
+                        ?>
+                        <div class="oc-item">
+                            <div class="product iproduct clearfix">
+                                <div class="product-image">
+                                    <a href="#">
+                                        <img class="img-fluid product_image_set" src="<?php echo base_url(); ?>assets/images/defaultproduct.png" style="background-image:url(<?php echo PRODUCTIMAGELINK . $value['file_name']; ?>);background-size: cover;background-size: contain;
+                                             background-repeat: no-repeat;
+                                             background-position: center;"   alt="Image Description"/>                                      </a>
+
+                                    <div class="product-overlay">
+                                        <a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
+                                        <a href="include/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-zoom-in2"></i><span> Quick View</span></a>
+                                    </div>
                                 </div>
-                                <div class="col product-item__body pl-2 pl-lg-3 mr-xl-2 mr-wd-1">
-                                    <div class="mb-4">
-                                        <div class="mb-2"><a href="#" class="font-size-12 text-gray-5"><?php echo $product['sku']; ?></a></div>
-                                        <h5 class="product-item__title"><a href="#" class="text-blue font-weight-bold"><?php echo $product['title']; ?></a></h5>
-                                    </div>
+                                <div class="product-desc center">
+                                    <div class="product-title"><h3><a href="#"><?php echo $value['title']; ?></a></h3></div>
 
 
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <!-- Input -->
-                                        <div class="js-form-message mb-4">
-                                            <label class="form-label">
-                                                NAME
-                                                <span class="text-danger">*</span>
-                                            </label>
-                                            <input type="text" class="form-control" name="name" placeholder="" aria-label="" required="" data-msg="Please enter your frist name." data-error-class="u-has-error" data-success-class="u-has-success" autocomplete="off">
-                                        </div>
-                                        <!-- End Input -->
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <!-- Input -->
-                                        <div class="js-form-message mb-4">
-                                            <label class="form-label">
-                                                EMAIL
-                                                <span class="text-danger">*</span>
-                                            </label>
-                                            <input type="text" class="form-control" name="email" placeholder="" aria-label="" required="" data-msg="Please enter your last name." data-error-class="u-has-error" data-success-class="u-has-success">
-                                        </div>
-                                        <!-- End Input -->
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <!-- Input -->
-                                        <div class="js-form-message mb-4">
-                                            <label class="form-label">
-                                                CONTACT
-                                                <span class="text-danger">*</span>
-                                            </label>
-                                            <input type="text" class="form-control" name="contact_no" placeholder="" aria-label="" required="" data-msg="Please enter your last name." data-error-class="u-has-error" data-success-class="u-has-success">
-                                        </div>
-                                        <!-- End Input -->
-                                    </div>
-
-
-                                    <div class="col-md-12">
-                                        <div class="js-form-message mb-4">
-                                            <label class="form-label">
-                                                MESSAGE
-                                            </label>
-
-                                            <div class="input-group">
-                                                <textarea class="form-control p-5" rows="4" name="message" placeholder=""></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" name="send_inquiry" class="btn btn-primary">Send Inquiry</button>
 
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </form>
+
+                        <?php
+                    }
+                    ?>
+                </div>
+
             </div>
+
         </div>
+
     </div>
 
+</section><!-- #content end -->
 
-</main>
-<!-- ========== END MAIN CONTENT ========== -->
-
-
-<script>
-    App.controller('productDetailsController', function ($scope, $http, $timeout, $interval) {
-
-        $scope.productsAttr = <?php echo json_encode($product['attr']); ?>;
-        console.log($scope.productsAttr[0]);
-        $scope.selectVeriation = 0;
-        $scope.selectProduct = $scope.productsAttr[$scope.selectVeriation ];
-        $scope.changeVeriation = function (index) {
-            $scope.selectVeriation = index;
-            $scope.selectProduct = $scope.productsAttr[$scope.selectVeriation ];
-            $timeout(function () {
-                $("#sliderSyncingNav").slick("refresh");
-                $("#sliderSyncingThumb").slick("refresh");
-            }, 500)
-
-
-        }
-
-    })
-</script>
 
 <?php
 $this->load->view('layout/footer');
