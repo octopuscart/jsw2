@@ -1,5 +1,5 @@
 <?php
-$this->load->view('layout/header_1');
+$this->load->view('layout/header');
 ?>
 <style>
     .u-slick--slider-syncing .slick-slide.slick-current {
@@ -21,7 +21,7 @@ $this->load->view('layout/header_1');
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-3 flex-nowrap flex-xl-wrap overflow-auto overflow-xl-visble">
                         <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a href="../home/index.html">Home</a></li>
-                        <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a href="../shop/shop.html"><?php echo $product['tag']; ?></a></li>
+                        <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a href="../shop/shop.html"><?php echo $product_details['title']; ?></a></li>
                     </ol>
                 </nav>
             </div>
@@ -37,93 +37,28 @@ $this->load->view('layout/header_1');
         <div class="mb-xl-14 mb-6">
             <div class="row">
 
-                <?php
-                if ($product['attr']) {
-                    ?>
-                    <div class="col-md-5 mb-4 mb-md-0" ng-if="selectProduct">
-                        <div id="sliderSyncingNav" class="js-slick-carousel u-slick mb-2"
-                             data-infinite="true"
-                             data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-classic u-slick__arrow-centered--y rounded-circle"
-                             data-arrow-left-classes="fas fa-arrow-left u-slick__arrow-classic-inner u-slick__arrow-classic-inner--left ml-lg-2 ml-xl-4"
-                             data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-classic-inner u-slick__arrow-classic-inner--right mr-lg-2 mr-xl-4"
-                             data-nav-for="#sliderSyncingThumb">
 
+                <div class="col-md-5 mb-4 mb-md-0" >
+                    <div id="sliderSyncingNav" class="js-slick-carousel u-slick mb-2"
+                         data-infinite="true"
+                         data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-classic u-slick__arrow-centered--y rounded-circle"
+                         data-arrow-left-classes="fas fa-arrow-left u-slick__arrow-classic-inner u-slick__arrow-classic-inner--left ml-lg-2 ml-xl-4"
+                         data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-classic-inner u-slick__arrow-classic-inner--right mr-lg-2 mr-xl-4"
+                         data-nav-for="#sliderSyncingThumb">
+                      
                             <div class="js-slide">
-                                <img class="img-fluid" src="<?php echo base_url(); ?>assets/theme2/images/testproduct/{{selectProduct.img[0]}}" alt="Image Description">
+                                <img class="img-fluid" src="<?php echo PRODUCTIMAGELINK. $product_details['file_name']; ?>" alt="Image Description">
                             </div>
-                            <div class="js-slide">
-                                <img class="img-fluid" src="<?php echo base_url(); ?>assets/theme2/images/testproduct/{{selectProduct.img[1]}}" alt="Image Description">
-                            </div>
-
-                        </div>
-
-                        <div id="sliderSyncingThumb" class="js-slick-carousel u-slick u-slick--slider-syncing u-slick--slider-syncing-size u-slick--gutters-1 u-slick--transform-off"
-                             data-infinite="true"
-                             data-slides-show="5"
-                             data-is-thumbs="true"
-                             data-nav-for="#sliderSyncingNav">
-
-                            <div class="js-slide">
-                                <img class="img-fluid" src="<?php echo base_url(); ?>assets/theme2/images/testproduct/{{selectProduct.img[0]}}" alt="Image Description">
-                            </div>
-                            <div class="js-slide">
-                                <img class="img-fluid" src="<?php echo base_url(); ?>assets/theme2/images/testproduct/{{selectProduct.img[1]}}" alt="Image Description">
-                            </div>
-
-
-                        </div>
+                        
                     </div>
-                    <?php
-                } else {
-                    ?>
-                    <div class="col-md-5 mb-4 mb-md-0" >
-                        <div id="sliderSyncingNav" class="js-slick-carousel u-slick mb-2"
-                             data-infinite="true"
-                             data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-classic u-slick__arrow-centered--y rounded-circle"
-                             data-arrow-left-classes="fas fa-arrow-left u-slick__arrow-classic-inner u-slick__arrow-classic-inner--left ml-lg-2 ml-xl-4"
-                             data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-classic-inner u-slick__arrow-classic-inner--right mr-lg-2 mr-xl-4"
-                             data-nav-for="#sliderSyncingThumb">
-                                 <?php
-                                 foreach ($product['img'] as $ikey => $ivalue) {
-                                     ?>
-                                <div class="js-slide">
-                                    <img class="img-fluid" src="<?php echo base_url(); ?>assets/theme2/images/testproduct/<?php echo $ivalue; ?>" alt="Image Description">
-                                </div>
-                                <div class="js-slide">
-                                    <img class="img-fluid" src="<?php echo base_url(); ?>assets/theme2/images/testproduct/<?php echo $ivalue; ?>" alt="Image Description">
-                                </div>
-                                <?php
-                            }
-                            ?>
-                        </div>
 
-                        <div id="sliderSyncingThumb" class="js-slick-carousel u-slick u-slick--slider-syncing u-slick--slider-syncing-size u-slick--gutters-1 u-slick--transform-off"
-                             data-infinite="true"
-                             data-slides-show="5"
-                             data-is-thumbs="true"
-                             data-nav-for="#sliderSyncingNav">
-                                 <?php
-                                 foreach ($product['img'] as $ikey => $ivalue) {
-                                     ?>
-                                <div class="js-slide" style="cursor: pointer;">
-                                    <img class="img-fluid" src="<?php echo base_url(); ?>assets/theme2/images/testproduct/<?php echo $ivalue; ?>" alt="Image Description">
-                                </div>
-                                <div class="js-slide" style="cursor: pointer;">
-                                    <img class="img-fluid" src="<?php echo base_url(); ?>assets/theme2/images/testproduct/<?php echo $ivalue; ?>" alt="Image Description">
-                                </div>
-                                <?php
-                            }
-                            ?>
-                        </div>
-                    </div>
-                    <?php
-                }
-                ?>
+
+                </div>
+
                 <div class="col-md-7 mb-md-6 mb-lg-0">
                     <div class="mb-2">
                         <div class="border-bottom mb-3 pb-md-1 pb-3">
-                            <a href="#" class="font-size-12 text-gray-5 mb-2 d-inline-block"><?php echo $product['tag']; ?></a>
-                            <h2 class="font-size-25 text-lh-1dot2"><?php echo $product['title']; ?></h2>
+                            <h2 class="font-size-25 text-lh-1dot2"><?php echo $product_details['title']; ?></h2>
                             <div class="mb-2">
                                 <a class="d-inline-flex align-items-center small font-size-15 text-lh-1" href="#">
                                     <div class="text-warning mr-2">
@@ -145,29 +80,21 @@ $this->load->view('layout/header_1');
                             <a href="#" class="text-gray-6 font-size-13 ml-2"><i class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
                         </div>
                         <div class="mb-2">
-                            <ul class="font-size-14 pl-3 ml-1 text-gray-110">
+                            <div class="font-size-14 pl-3 ml-1 text-gray-110" style="white-space: pre-line;">
                                 <?php
-                                foreach ($product['spacs'] as $skey => $svalue) {
-                                    ?>
-                                    <li><?php echo $svalue; ?></li>
-                                    <?php
-                                }
+                                echo $product_details['description'];
                                 ?>
-                            </ul>
+                            </div>
                         </div>
-                        <p><strong>SKU</strong>: <?php echo $product['sku']; ?></p>
+                        <p><strong>SKU</strong>: <?php echo $product_details['short_description']; ?></p>
 
                         <div class="border-top border-bottom py-3 mb-4">
                             <div class="d-flex align-items-center">
 
                                 <!-- Select -->
-                                <div class="row"> <?php
-                                    foreach ($product['attr'] as $skey => $svalue) {
-                                        ?>
-                                        <button class="btn veriationbutton {{selectVeriation==<?php echo $skey; ?>?'btn-danger':'btn-warning'}}"  ng-click="changeVeriation(<?php echo $skey; ?>)" ><?php echo $svalue['title']; ?></button>
-                                        <?php
-                                    }
-                                    ?>
+                                <div class="row">
+                                   
+                                  
                                 </div>
                                 <!-- End Select -->
                             </div>
@@ -179,7 +106,6 @@ $this->load->view('layout/header_1');
                                 <div class="border rounded-pill py-2 px-3 border-color-1">
                                     <div class="js-quantity row align-items-center">
                                         <div class="col">
-                                            <input class="js-result form-control h-auto border-0 rounded p-0 shadow-none" type="number" value="<?php echo $product['moq']; ?>" min='<?php echo $product['moq']; ?>'>
                                         </div>
                                         <div class="col-auto pr-1">
                                             <a class="js-minus btn btn-icon btn-xs btn-outline-secondary rounded-circle border-0" href="javascript:;">
@@ -303,20 +229,20 @@ $this->load->view('layout/header_1');
 <script>
     App.controller('productDetailsController', function ($scope, $http, $timeout, $interval) {
 
-    $scope.productsAttr = <?php echo json_encode($product['attr']); ?>;
-    console.log($scope.productsAttr[0]);
-    $scope.selectVeriation = 0;
-    $scope.selectProduct = $scope.productsAttr[$scope.selectVeriation ];
-    $scope.changeVeriation = function(index){
-    $scope.selectVeriation = index;
-    $scope.selectProduct = $scope.productsAttr[$scope.selectVeriation ];
-    $timeout(function(){
-    $("#sliderSyncingNav").slick("refresh");
-    $("#sliderSyncingThumb").slick("refresh");
-    }, 500)
+        $scope.productsAttr = <?php echo json_encode($product['attr']); ?>;
+        console.log($scope.productsAttr[0]);
+        $scope.selectVeriation = 0;
+        $scope.selectProduct = $scope.productsAttr[$scope.selectVeriation ];
+        $scope.changeVeriation = function (index) {
+            $scope.selectVeriation = index;
+            $scope.selectProduct = $scope.productsAttr[$scope.selectVeriation ];
+            $timeout(function () {
+                $("#sliderSyncingNav").slick("refresh");
+                $("#sliderSyncingThumb").slick("refresh");
+            }, 500)
 
 
-    }
+        }
 
     })
 </script>
