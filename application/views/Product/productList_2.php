@@ -175,7 +175,7 @@ $image2 = "";
 
 
                             <div id="shop" class="shop product-1 grid-container clearfix" >
-                                <div class="product  clearfix "  ng-repeat="(k, product) in productResults.products" ng-class="productautoheight">
+                                <div class="product clearfix "  ng-repeat="(k, product) in productResults.products" ng-class="productautoheight">
                                     <div class="{{$index%2 == 0?'changedescolor':'changedescolor2'}}">
 
                                         <div class="product-image " >

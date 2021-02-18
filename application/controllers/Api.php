@@ -60,9 +60,9 @@ class Api extends REST_Controller {
             $user_address_details = $this->session->userdata('shipping_address');
         }
         if ($user_address_details) {
-            
+
             $addresscheck2 = $this->session->userdata('shipping_address');
-            
+
             if ($user_address_details['zipcode'] == 'Tsim Sha Tsui') {
                 $session_cart['shipping_price'] = 0;
             }
@@ -198,7 +198,15 @@ class Api extends REST_Controller {
         foreach ($productListFinal1 as $key => $value) {
 
             $variantproduct = $this->Product_model->getProductVeriants($value['product_id']);
-
+            $featurelist = array();
+            $featurelist = (explode("\n", trim($value['description'])));
+            $fcol1 =  round(count($featurelist)/2);
+            $fcol2 = count($featurelist) - $fcol1;
+            $featurelist1 = array_slice($featurelist, 0, $fcol1);
+            $featurelist2 = array_slice($featurelist, $fcol1, count($featurelist));
+          
+            $feature = [$featurelist1, $featurelist2];
+            $value['feature'] = $feature;
             if ($variantproduct) {
                 $value['hasvarient'] = '1';
                 $value['varients'] = $variantproduct;

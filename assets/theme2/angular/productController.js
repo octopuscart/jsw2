@@ -118,9 +118,7 @@ App.controller('ProductController', function ($scope, $http, $timeout, $interval
             }
 
 
-//            $timeout(function () {
-//                $scope.productProcess.state = 2;
-//            }, 2000)
+          
 
     
 
