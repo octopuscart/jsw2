@@ -37,14 +37,23 @@ $this->load->view('layout/header');
                                     <div class="slider-wrap" data-lightbox="gallery">
                                         <div class="slide" data-thumb="<?php echo PRODUCTIMAGELINK . $product_details['file_name']; ?>">
                                             <a href="<?php echo PRODUCTIMAGELINK . $product_details['file_name']; ?>" title="<?php echo $product_details['title']; ?>" data-lightbox="gallery-item">
-                                                <img src="<?php echo PRODUCTIMAGELINK . $product_details['file_name']; ?>" alt="<?php echo $product_details['title']; ?>">
+                                                <img src="<?php echo base_url(); ?>assets/images/defaultproduct.png" alt="<?php echo $product_details['title']; ?>" style="background:url('<?php echo PRODUCTIMAGELINK . $product_details['file_name']; ?>');    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;">
+                                            </a>
+                                        </div>
+                                        <div class="slide" data-thumb="<?php echo PRODUCTIMAGELINK . $product_details['file_name']; ?>">
+                                            <a href="<?php echo PRODUCTIMAGELINK . $product_details['file_name']; ?>" title="<?php echo $product_details['title']; ?>" data-lightbox="gallery-item">
+                                                <img src="<?php echo base_url(); ?>assets/images/defaultproduct.png" alt="<?php echo $product_details['title']; ?>" style="background:url('<?php echo PRODUCTIMAGELINK . $product_details['file_name']; ?>');    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;">
                                             </a>
                                         </div>
 
                                     </div>
                                 </div>
                             </div>
-                            <div class="sale-flash">Sale!</div>
+
                         </div><!-- Product Single - Gallery End -->
 
                     </div>
@@ -99,35 +108,7 @@ $this->load->view('layout/header');
 
                         <!-- Product Single - Share
                         ============================================= -->
-                        <div class="si-share noborder clearfix">
-                            <span>Share:</span>
-                            <div>
-                                <a href="#" class="social-icon si-borderless si-facebook">
-                                    <i class="icon-facebook"></i>
-                                    <i class="icon-facebook"></i>
-                                </a>
-                                <a href="#" class="social-icon si-borderless si-twitter">
-                                    <i class="icon-twitter"></i>
-                                    <i class="icon-twitter"></i>
-                                </a>
-                                <a href="#" class="social-icon si-borderless si-pinterest">
-                                    <i class="icon-pinterest"></i>
-                                    <i class="icon-pinterest"></i>
-                                </a>
-                                <a href="#" class="social-icon si-borderless si-gplus">
-                                    <i class="icon-gplus"></i>
-                                    <i class="icon-gplus"></i>
-                                </a>
-                                <a href="#" class="social-icon si-borderless si-rss">
-                                    <i class="icon-rss"></i>
-                                    <i class="icon-rss"></i>
-                                </a>
-                                <a href="#" class="social-icon si-borderless si-email3">
-                                    <i class="icon-email3"></i>
-                                    <i class="icon-email3"></i>
-                                </a>
-                            </div>
-                        </div><!-- Product Single - Share End -->
+
 
                     </div>
 
@@ -136,37 +117,39 @@ $this->load->view('layout/header');
 
                         <div class="divider divider-center"><i class="icon-circle-blank"></i></div>
 
+
                         <div class="feature-box fbox-plain fbox-dark fbox-small">
                             <div class="fbox-icon">
                                 <i class="icon-thumbs-up2"></i>
                             </div>
                             <h3>100% Original</h3>
-                            <p class="notopmargin">We guarantee you the sale of Original Brands.</p>
+                            <p class="notopmargin">We grantee authentic parts & products</p>
                         </div>
 
                         <div class="feature-box fbox-plain fbox-dark fbox-small">
                             <div class="fbox-icon">
-                                <i class="icon-credit-cards"></i>
+                                <i class="icon-box"></i>
                             </div>
-                            <h3>Payment Options</h3>
-                            <p class="notopmargin">We accept Visa, MasterCard and American Express.</p>
+                            <h3>OEM Product</h3>
+                            <p class="notopmargin">We can customize product according to your requirement</p>
                         </div>
 
                         <div class="feature-box fbox-plain fbox-dark fbox-small">
                             <div class="fbox-icon">
                                 <i class="icon-truck2"></i>
                             </div>
-                            <h3>Free Shipping</h3>
-                            <p class="notopmargin">Free Delivery to 100+ Locations on orders above $40.</p>
+                            <h3>Shipping Globally</h3>
+                            <p class="notopmargin">We can ship our products globally</p>
                         </div>
 
                         <div class="feature-box fbox-plain fbox-dark fbox-small">
                             <div class="fbox-icon">
                                 <i class="icon-undo"></i>
                             </div>
-                            <h3>30-Days Returns</h3>
-                            <p class="notopmargin">Return or exchange items purchased within 30 days.</p>
+                            <h3>24X7 Support </h3>
+                            <p class="notopmargin">We offer 24X7 customer support. </p>
                         </div>
+
 
                     </div>
 
@@ -194,10 +177,7 @@ $this->load->view('layout/header');
                                              background-repeat: no-repeat;
                                              background-position: center;"   alt="Image Description"/>                                      </a>
 
-                                    <div class="product-overlay">
-                                        <a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>
-                                        <a href="include/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-zoom-in2"></i><span> Quick View</span></a>
-                                    </div>
+
                                 </div>
                                 <div class="product-desc center">
                                     <div class="product-title"><h3><a href="#"><?php echo $value['title']; ?></a></h3></div>

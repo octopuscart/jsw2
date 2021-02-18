@@ -84,10 +84,10 @@ $image2 = "";
             <span> <?php
                 $categorylist = [];
                 foreach ($categorie_parent as $key => $value) {
-                     $value['category_name'];
+                    $value['category_name'];
                     array_push($categorylist, $value['category_name']);
                 }
-              echo   implode(" - ", $categorylist);
+                echo implode(" - ", $categorylist);
                 ?></span>
             <ol class="breadcrumb">
                 <?php
@@ -105,72 +105,72 @@ $image2 = "";
 
         <div class="content-wrap">
 
-            <div class="container clearfix">
-               
+            <div class=" clearfix">
+
                 <!-- End breadcrumb -->
 
                 <div class="container" style="min-height: 500px">
                     <div class="row">
-<!--                        <div class="col-md-2">
-
-                            <a href="#"><img src="<?php echo base_url(); ?>assets/homeblock/l11.jpg"  alt="Image"></a>
-                            <div class="widget clearfix">
-
-                                <h4>Last Viewed Items</h4>
-                                <div class="widget-last-view">
-
-                                    <?php
-                                    $categorylist = [
-                                        array("title" => "TV", "link" => "", "img" => "tv.png"),
-                                        array("title" => "AC", "link" => "", "img" => "ac.png"),
-                                        array("title" => "WASHING MACHINES", "link" => "", "img" => "washing.png"),
-                                        array("title" => "TOASTER", "link" => "", "img" => "toaster.png"),
-                                        array("title" => "FOOD PROCESSOR", "link" => "", "img" => "foodp.png"),
-                                        array("title" => "MICROWAVE OVEN", "link" => "", "img" => "mvo.png"),
-                                        array("title" => "BLENDERS", "link" => "", "img" => "blender.png"),
-                                        array("title" => "FANS", "link" => "", "img" => "fans.png"),
-                                        array("title" => "HIFI SYSTEM", "link" => "", "img" => "hifi.png"),
-                                        array("title" => "STOVES", "link" => "", "img" => "stove.png"),
-                                        array("title" => "OVEN", "link" => "", "img" => "own.png"),
-                                        array("title" => "KETTLE", "link" => "", "img" => "kattle.png"),
-                                        array("title" => "PRESSURE COOKERS", "link" => "", "img" => "cooker.png"),
-                                        array("title" => "MATTRESS", "link" => "", "img" => "matress.png"),
-                                        array("title" => "IRONS", "link" => "", "img" => "iron.png"),
-                                        array("title" => "BOOMBOX", "link" => "", "img" => "boombox.png"),
-                                        array("title" => "DVD PLAYERS", "link" => "", "img" => "dvdp.png"),
-                                        array("title" => "WALL MOUNT", "link" => "", "img" => "wallm.png"),
-                                    ];
-                                    foreach ($categorylist as $key => $value) {
-                                        ?>
-
-                                        <div class="spost clearfix">
-                                            <div class="entry-image">
-                                                <a href="#">
-                                                    <img src="<?php echo base_url(); ?>assets/categoryblock/<?php echo $value['img']; ?>" alt="JSW <?php echo $value['title']; ?>">
-
-                                                </a>
-                                            </div>
-                                            <div class="entry-c">
-                                                <div class="entry-title">
-                                                    <h4><a href="#"><?php echo $value['title']; ?></a></h4>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <?php
-                                    }
-                                    ?>
-
-
-
-
-
-
-                                </div>
-
-                            </div>
-                        </div>-->
+                        <!--                        <div class="col-md-2">
+                        
+                                                    <a href="#"><img src="<?php echo base_url(); ?>assets/homeblock/l11.jpg"  alt="Image"></a>
+                                                    <div class="widget clearfix">
+                        
+                                                        <h4>Last Viewed Items</h4>
+                                                        <div class="widget-last-view">
+                        
+                        <?php
+                        $categorylist = [
+                            array("title" => "TV", "link" => "", "img" => "tv.png"),
+                            array("title" => "AC", "link" => "", "img" => "ac.png"),
+                            array("title" => "WASHING MACHINES", "link" => "", "img" => "washing.png"),
+                            array("title" => "TOASTER", "link" => "", "img" => "toaster.png"),
+                            array("title" => "FOOD PROCESSOR", "link" => "", "img" => "foodp.png"),
+                            array("title" => "MICROWAVE OVEN", "link" => "", "img" => "mvo.png"),
+                            array("title" => "BLENDERS", "link" => "", "img" => "blender.png"),
+                            array("title" => "FANS", "link" => "", "img" => "fans.png"),
+                            array("title" => "HIFI SYSTEM", "link" => "", "img" => "hifi.png"),
+                            array("title" => "STOVES", "link" => "", "img" => "stove.png"),
+                            array("title" => "OVEN", "link" => "", "img" => "own.png"),
+                            array("title" => "KETTLE", "link" => "", "img" => "kattle.png"),
+                            array("title" => "PRESSURE COOKERS", "link" => "", "img" => "cooker.png"),
+                            array("title" => "MATTRESS", "link" => "", "img" => "matress.png"),
+                            array("title" => "IRONS", "link" => "", "img" => "iron.png"),
+                            array("title" => "BOOMBOX", "link" => "", "img" => "boombox.png"),
+                            array("title" => "DVD PLAYERS", "link" => "", "img" => "dvdp.png"),
+                            array("title" => "WALL MOUNT", "link" => "", "img" => "wallm.png"),
+                        ];
+                        foreach ($categorylist as $key => $value) {
+                            ?>
+                                                
+                                                                                        <div class="spost clearfix">
+                                                                                            <div class="entry-image">
+                                                                                                <a href="#">
+                                                                                                    <img src="<?php echo base_url(); ?>assets/categoryblock/<?php echo $value['img']; ?>" alt="JSW <?php echo $value['title']; ?>">
+                                                
+                                                                                                </a>
+                                                                                            </div>
+                                                                                            <div class="entry-c">
+                                                                                                <div class="entry-title">
+                                                                                                    <h4><a href="#"><?php echo $value['title']; ?></a></h4>
+                                                                                                </div>
+                                                
+                                                                                            </div>
+                                                                                        </div>
+                                                
+                            <?php
+                        }
+                        ?>
+                        
+                        
+                        
+                        
+                        
+                        
+                                                        </div>
+                        
+                                                    </div>
+                                                </div>-->
                         <div class="col-md-12 ">
 
 
@@ -189,17 +189,31 @@ $image2 = "";
 
                                         </div>
                                         <div class="product-desc {{$index%2 == 0?'changedescolor':''}}" >
-                                            <div class="product-title"><h3><a href="#">{{product.title}}</a></h3></div>
-                                            <div class="product-price"><ins>{{product.short_description}}</ins></div>
-                                            <div class="product-rating">
-                                                <i class="icon-star3"></i>
-                                                <i class="icon-star3"></i>
-                                                <i class="icon-star3"></i>
-                                                <i class="icon-star3"></i>
-                                                <i class="icon-star-half-full"></i>
+                                            <div class="row">
+                                                <div class="col-md-8"> 
+                                                    <div class="product-title"><h3><a href="#">{{product.title}}</a></h3></div>
+                                                    <div class="product-price"><ins>{{product.short_description}}</ins></div>
+                                                    <div class="product-rating">
+                                                        <i class="icon-star3"></i>
+                                                        <i class="icon-star3"></i>
+                                                        <i class="icon-star3"></i>
+                                                        <i class="icon-star3"></i>
+                                                        <i class="icon-star-half-full"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4"> 
+                                                    <button class="btn btn-link" type="button"><i class="fa fa-plus"></i> Add To Enquiry</button>
+                                                    <a class="btn btn-link " type="button" target="_blank" href="https://wa.me/?text=<?php echo urlencode(site_url("Product/ProductDetails/"))?>{{product.id}}">
+                                                        <span class="fa-stack fa-lg">
+                                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                                            <i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i>
+                                                        </span>
+                                                    </a>
+                                                </div>
+
                                             </div>
                                             <hr/>
-                                            <div class="row featurelist">
+                                            <div class="col-md-12 row featurelist">
                                                 <div class="col-md-6"> 
                                                     <ul class="iconlist">
                                                         <li ng-repeat="feature1 in product.feature[0]"><i class="icon-caret-right"></i> {{feature1}}</li>

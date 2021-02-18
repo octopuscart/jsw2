@@ -37,6 +37,8 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/theme2/sweetalert2/sweetalert2.min.css">
 
         <script src="<?php echo base_url(); ?>assets/theme2/angular/angular.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+        
 
         <style>
 
@@ -87,7 +89,7 @@
 
                     <div class="col_half nobottommargin">
 
-                        <p class="nobottommargin"><strong>Call:</strong>&nbsp; +(852) 2368 7651 <span class='blankspace'>|</span> <strong>Email:</strong>&nbsp; info@jswelectronics.com</p>
+                        <p class="nobottommargin"><strong>Tel :</strong>&nbsp; +(852) 2368 7651 <span class='blankspace'>|</span> <strong>Email:</strong>&nbsp; navrang@netvigator.com</p>
 
                     </div>
 
@@ -183,7 +185,7 @@
                             <div id="top-search">
                                 <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
                                 <form action="search.html" method="get">
-                                    <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
+                                    <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." style="font-size: 13px;">
                                 </form>
                             </div><!-- #top-search end -->
 
