@@ -142,22 +142,22 @@ $image2 = "";
                         ];
                         foreach ($categorylist as $key => $value) {
                             ?>
-                                                
-                                                                                        <div class="spost clearfix">
-                                                                                            <div class="entry-image">
-                                                                                                <a href="#">
-                                                                                                    <img src="<?php echo base_url(); ?>assets/categoryblock/<?php echo $value['img']; ?>" alt="JSW <?php echo $value['title']; ?>">
-                                                
-                                                                                                </a>
-                                                                                            </div>
-                                                                                            <div class="entry-c">
-                                                                                                <div class="entry-title">
-                                                                                                    <h4><a href="#"><?php echo $value['title']; ?></a></h4>
+                                                    
+                                                                                            <div class="spost clearfix">
+                                                                                                <div class="entry-image">
+                                                                                                    <a href="#">
+                                                                                                        <img src="<?php echo base_url(); ?>assets/categoryblock/<?php echo $value['img']; ?>" alt="JSW <?php echo $value['title']; ?>">
+                                                    
+                                                                                                    </a>
                                                                                                 </div>
-                                                
+                                                                                                <div class="entry-c">
+                                                                                                    <div class="entry-title">
+                                                                                                        <h4><a href="#"><?php echo $value['title']; ?></a></h4>
+                                                                                                    </div>
+                                                    
+                                                                                                </div>
                                                                                             </div>
-                                                                                        </div>
-                                                
+                                                    
                             <?php
                         }
                         ?>
@@ -176,7 +176,7 @@ $image2 = "";
 
                             <div id="shop" class="shop product-1 grid-container clearfix" >
                                 <div class="product  clearfix "  ng-repeat="(k, product) in productResults.products" ng-class="productautoheight">
-                                    <div class="{{$index%2 == 0?'changedescolor':'changedescolor2'}}">
+                                    <div class="{{$index%2 == 0?'changedescolorm':'changedescolorm2'}}">
 
                                         <div class="product-image " >
                                             <a href="#">
@@ -203,7 +203,7 @@ $image2 = "";
                                                 </div>
                                                 <div class="col-md-4"> 
                                                     <button class="btn btn-link" type="button"><i class="fa fa-plus"></i> Add To Enquiry</button>
-                                                    <a class="btn btn-link " type="button" target="_blank" href="https://wa.me/?text=<?php echo urlencode(site_url("Product/ProductDetails/"))?>{{product.id}}">
+                                                    <a class="btn btn-link " type="button" target="_blank" style='color:green' href="https://wa.me/?text=<?php echo urlencode(site_url("Product/ProductDetails/")) ?>{{product.id}}">
                                                         <span class="fa-stack fa-lg">
                                                             <i class="fa fa-circle fa-stack-2x"></i>
                                                             <i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i>
