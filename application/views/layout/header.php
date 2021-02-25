@@ -38,7 +38,7 @@
 
         <script src="<?php echo base_url(); ?>assets/theme2/angular/angular.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
-        
+
 
         <style>
 
@@ -79,13 +79,13 @@
 
         <!-- Document Wrapper
         ============================================= -->
-        <div id="wrapper" class="clearfix">
+        <div id="wrapper" class="clearfix ">
 
             <!-- Top Bar
             ============================================= -->
-            <div id="top-bar" class="d-none d-md-block">
+            <div id="top-bar" class="d-none d-md-block bluegradiant ">
 
-                <div class="container clearfix">
+                <div class="container clearfix ">
 
                     <div class="col_half nobottommargin">
 
@@ -127,69 +127,9 @@
 
                         <!-- Primary Navigation
                         ============================================= -->
-                        <nav id="primary-menu">
-
-                            <ul>
-                                <li class="current">
-                                    <a href="#"><div>INSIGTS</div></a>
-                                    <ul>
-                                        <li><a href="#"><div>Customer Service</div></a></li>
-                                        <li><a href="#"><div>Privacy Policy</div></a></li>
-
-                                    </ul>
-                                </li>
-                                <!-- Mega Menu
-                                ============================================= -->
-                                <li class="mega-menu"><a href="#"><div>Our Products</div></a>
-                                    <div class="mega-menu-content style-2 clearfix">
-                                        <?php
-                                        $this->db->where("parent_id", "0");
-                                        $query = $this->db->get("category");
-                                        $categoryp = $query->result_array();
-                                        foreach ($categoryp as $pkey => $pvalue) {
-                                            ?>
-                                            <ul class="mega-menu-column col-lg-3">
-                                                <li class="mega-menu-title"><a href="#"><div><?php echo $pvalue['category_name']; ?></div></a>
-                                                    <ul>
-                                                        <?php
-                                                        $this->db->where("parent_id", $pvalue['id']);
-                                                        $query = $this->db->get("category");
-                                                        $category = $query->result_array();
-                                                        foreach ($category as $key => $value) {
-                                                            ?>
-                                                        <li><a href="<?php echo site_url("product/productlist/1/".$value['id']);?>"><div><?php echo $value['category_name']; ?></div></a></li>
-                                                            <?php
-                                                        }
-                                                        ?>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                            <?php
-                                        }
-                                        ?>
-
-                                    </div>
-                                </li><!-- .mega-menu end -->
-                                <li><a href="#"><div>CATALOGS</div></a>
-
-                                </li><!-- .mega-menu end -->
-                                <li><a href="#"><div>BLOG</div></a></li>
-                                <li><a href="#"><div>FAQ's</div></a></li>
-                                <li><a href="#"><div>CUSTOMER SUPPORT</div></a></li>
-                                <li><a href="#"><div>Contact</div></a></li>
-                            </ul>
-
-
-                            <!-- Top Search
-                            ============================================= -->
-                            <div id="top-search">
-                                <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-                                <form action="search.html" method="get">
-                                    <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." style="font-size: 13px;">
-                                </form>
-                            </div><!-- #top-search end -->
-
-                        </nav><!-- #primary-menu end -->
+                        <?php
+                        $this->load->view('layout/menu');
+                        ?>
 
                     </div>
 
@@ -201,10 +141,10 @@
 
 
                 var App = angular.module('App', []).config(function ($interpolateProvider, $httpProvider) {
-                    //$interpolateProvider.startSymbol('{$');
-                    //$interpolateProvider.endSymbol('$}');
-                    $httpProvider.defaults.headers.common = {};
-                    $httpProvider.defaults.headers.post = {};
+                //$interpolateProvider.startSymbol('{$');
+                //$interpolateProvider.endSymbol('$}');
+                $httpProvider.defaults.headers.common = {};
+                $httpProvider.defaults.headers.post = {};
                 });
                 var baseurl = "<?php echo site_url(); ?>";
                 var imageurlg = "<?php echo PRODUCTIMAGELINK; ?>";

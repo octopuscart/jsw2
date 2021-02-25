@@ -1,31 +1,28 @@
 <?php
-$this->load->view('layout/header_1');
+$this->load->view('layout/header');
 ?> <!-- ========== MAIN CONTENT ========== -->
-<main id="content" role="main">
-    <!-- breadcrumb -->
-    <div class="bg-gray-13 bg-md-transparent">
-        <div class="container">
-            <!-- breadcrumb -->
-            <div class="my-md-3">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-3 flex-nowrap flex-xl-wrap overflow-auto overflow-xl-visble">
-                        <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1"><a href="../home/index.html">Home</a></li>
-                        <li class="breadcrumb-item flex-shrink-0 flex-xl-shrink-1 active" aria-current="page">Contact</li>
-                    </ol>
-                </nav>
-            </div>
-            <!-- End breadcrumb -->
-        </div>
+<section id="page-title" style="">
+
+    <div class="container clearfix">
+        <h1>Contact</h1>
+        <span>Get in Touch with Us</span>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+        </ol>
     </div>
-    <!-- End breadcrumb -->
 
+</section><!-- #page-title end -->
 
-    <div class="container">
-        <div class="mb-5">
-            <h1 class="text-center">Contact Us</h1>
-        </div>
-        <div class="row mb-10">
-            <div class="col-lg-7 col-xl-6 mb-8 mb-lg-0">
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+
+            <!-- Contact Form
+            ============================================= -->
+            <div class="col_half">
                 <div class="mr-xl-6">
                     <div class="border-bottom border-color-1 mb-5">
                         <h3 class="section-title mb-0 pb-2 font-size-25">Leave us a Message</h3>
@@ -85,26 +82,31 @@ $this->load->view('layout/header_1');
                     </form>
                 </div>
             </div>
-            <div class="col-lg-5 col-xl-6">
+            <div class="col_half col_last">
                 <div class="mb-6">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14767.004060519197!2d114.1482444!3d22.2874196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3fc7db1e3e305b1b!2sGolden%20Sun%20Centre!5e0!3m2!1sen!2sin!4v1596182376443!5m2!1sen!2sin" width="100%" height="228px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                        </div>
-                <div class="border-bottom border-color-1 mb-5">
-                    <h3 class="section-title mb-0 pb-2 font-size-25">Our Address</h3>
+                    <div class="border-bottom border-color-1 mb-5">
+                        <h3 class="section-title mb-0 pb-2 font-size-25">Our Address</h3>
+                    </div>
+                    <address class="mb-6 text-lh-23">
+                        Room AB, 9/F, Golden Sun Centre, <br/>59/67 Bonham Strand West, <br/>Sheung Wan, Hong Kong
+
+                        <div class="">Tel: +(852) 2368 7651</div>
+                        <div class="">Email: <a class="text-blue text-decoration-on" href="">navrang@netvigator.com</a></div>
+                    </address>
+                    <h5 class="font-size-14 font-weight-bold mb-3">Opening Hours</h5>
+                    <div class="">Monday to Friday: 9am-9pm</div>
+                    <div class="mb-6">Saturday to Sunday: 9am-11pm</div>
                 </div>
-                <address class="mb-6 text-lh-23">
-                    Room AB, 9/F, Golden Sun Centre, <br/>59/67 Bonham Strand West, <br/>Sheung Wan, Hong Kong
-
-                    <div class="">Support: +(852) 2368 7651</div>
-                    <div class="">Email: <a class="text-blue text-decoration-on" href="">info@jsw.com</a></div>
-                </address>
-                <h5 class="font-size-14 font-weight-bold mb-3">Opening Hours</h5>
-                <div class="">Monday to Friday: 9am-9pm</div>
-                <div class="mb-6">Saturday to Sunday: 9am-11pm</div>
+                <div class="" style="height: 500px;margin-top: 50px">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7383.50200913203!2d114.148244!3d22.28742!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3fc7db1e3e305b1b!2sGolden%20Sun%20Centre!5e0!3m2!1sen!2sin!4v1613663215631!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
             </div>
+            <div class="clear"></div>
         </div>
-
     </div>
-</main>
+</div>
+</section>
+
 <!-- ========== END MAIN CONTENT ========== -->
 
 

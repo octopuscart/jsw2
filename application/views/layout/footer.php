@@ -1,45 +1,50 @@
+<div style="clear: both"></div>
 
-
-<div class="section ">
-    <div class="container clearfix">
-
-        <div class="col_one_fourth nobottommargin">
-            <div class="feature-box fbox-plain fbox-dark fbox-small">
-                <div class="fbox-icon">
-                    <i class="icon-thumbs-up2"></i>
+<div class=" ">
+    <div class="container-fluid clearfix mb-3 mt-40 ">
+        <div class="row">
+            <div class="col-md-3 nobottommargin featureblock bluegradiant">
+                <div class="feature-box fbox-plain fbox-dark fbox-small">
+                    <div class="fbox-icon">
+                        <i class="icon-thumbs-up2"></i>
+                    </div>
+                    <h3>100% Original</h3>
+                    <hr/>
+                    <p class="notopmargin">We grantee authentic parts & products</p>
                 </div>
-                <h3>100% Original</h3>
-                <p class="notopmargin">We grantee authentic parts & products</p>
             </div>
-        </div>
 
-        <div class="col_one_fourth nobottommargin">
-            <div class="feature-box fbox-plain fbox-dark fbox-small">
-                <div class="fbox-icon">
-                    <i class="icon-box"></i>
+            <div class="col-md-3 nobottommargin featureblock featureblock-black blackgradiant">
+                <div class="feature-box fbox-plain fbox-dark fbox-small">
+                    <div class="fbox-icon">
+                        <i class="icon-box"></i>
+                    </div>
+                    <h3>OEM Products</h3>
+                      <hr/>
+                    <p class="notopmargin">We can customize product according to your requirement</p>
                 </div>
-                <h3>OEM Product</h3>
-                <p class="notopmargin">We can customize product according to your requirement</p>
             </div>
-        </div>
 
-        <div class="col_one_fourth nobottommargin">
-            <div class="feature-box fbox-plain fbox-dark fbox-small">
-                <div class="fbox-icon">
-                    <i class="icon-truck2"></i>
+            <div class="col-md-3 nobottommargin featureblock bluegradiant">
+                <div class="feature-box fbox-plain fbox-dark fbox-small">
+                    <div class="fbox-icon">
+                        <i class="icon-truck2"></i>
+                    </div>
+                    <h3>Shipping Globally</h3>
+                      <hr/>
+                    <p class="notopmargin">We can ship our products globally</p>
                 </div>
-                <h3>Shipping Globally</h3>
-                <p class="notopmargin">We can ship our products globally</p>
             </div>
-        </div>
 
-        <div class="col_one_fourth nobottommargin col_last">
-            <div class="feature-box fbox-plain fbox-dark fbox-small">
-                <div class="fbox-icon">
-                    <i class="icon-undo"></i>
+            <div class="col-md-3 nobottommargin col_last featureblock featureblock-black blackgradiant">
+                <div class="feature-box fbox-plain fbox-dark fbox-small">
+                    <div class="fbox-icon">
+                        <i class="icon-undo"></i>
+                    </div>
+                    <h3>24X7 Support </h3>
+                      <hr/>
+                    <p class="notopmargin">We offer 24X7 customer support. </p>
                 </div>
-                <h3>24X7 Support </h3>
-                <p class="notopmargin">We offer 24X7 customer support. </p>
             </div>
         </div>
 
@@ -47,7 +52,7 @@
 </div>
 <!-- Footer
 ============================================= -->
-<footer id="footer" class="dark">
+<footer id="footer" class="dark blackgradiant">
 
     <div class="container">
 
@@ -212,7 +217,7 @@
 
     <!-- Copyrights
     ============================================= -->
-    <div id="copyrights">
+    <div id="copyrights" class="bluegradiant">
 
         <div class="container clearfix">
 

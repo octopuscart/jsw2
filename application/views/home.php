@@ -176,24 +176,24 @@ $this->load->view('layout/header');
 
                     <div class="row">
                         <div class="col-lg-6 norightpadding" style="margin-bottom: 15px;">
-                            <a href="#"><img src="<?php echo base_url(); ?>assets/homeblock/11.jpg" alt="Image"></a>
+                            <a href="<?php echo site_url("product/productlist/1/168"); ?>"><img src="<?php echo base_url(); ?>assets/homeblock/11.jpg" alt="Image"></a>
                         </div>
 
                         <div class="col-lg-6 norightpadding" style="margin-bottom: 15px;">
-                            <a href="#"><img src="<?php echo base_url(); ?>assets/homeblock/33.jpg" alt="Image"></a>
+                            <a href="<?php echo site_url("product/productlist/1/133"); ?>"><img src="<?php echo base_url(); ?>assets/homeblock/33.jpg" alt="Image"></a>
                         </div>
 
                         <div class="w-100"></div>
 
                         <div class="col-lg-12 norightpadding">
-                            <a href="#"><img src="<?php echo base_url(); ?>assets/homeblock/h11.jpg" alt="Image"></a>
+                            <a href="<?php echo site_url("product/productlist/1/154"); ?>"><img src="<?php echo base_url(); ?>assets/homeblock/h11.jpg" alt="Image"></a>
                         </div>
                     </div>
 
                 </div>
 
                 <div class="col-lg-5">
-                    <a href="#"><img src="<?php echo base_url(); ?>assets/homeblock/l11.jpg"  alt="Image"></a>
+                    <a href="<?php echo site_url("product/productlist/1/131"); ?>"><img src="<?php echo base_url(); ?>assets/homeblock/l11.jpg"  alt="Image"></a>
                 </div>
             </div>
 
@@ -208,29 +208,29 @@ $this->load->view('layout/header');
                 <ul class="clients-grid grid-6 nobottommargin clearfix categorylist">
                     <?php
                     $categorylist = [
-                        array("title" => "TV", "link" => "", "img" => "tv.png"),
-                        array("title" => "AC", "link" => "", "img" => "ac.png"),
-                        array("title" => "WASHING MACHINES", "link" => "", "img" => "washing.png"),
-                        array("title" => "TOASTER", "link" => "", "img" => "toaster.png"),
-                        array("title" => "FOOD PROCESSOR", "link" => "", "img" => "foodp.png"),
-                        array("title" => "MICROWAVE OVEN", "link" => "", "img" => "mvo.png"),
-                        array("title" => "BLENDERS", "link" => "", "img" => "blender.png"),
-                        array("title" => "FANS", "link" => "", "img" => "fans.png"),
-                        array("title" => "HIFI SYSTEM", "link" => "", "img" => "hifi.png"),
-                        array("title" => "STOVES", "link" => "", "img" => "stove.png"),
-                        array("title" => "OVEN", "link" => "", "img" => "own.png"),
-                        array("title" => "KETTLE", "link" => "", "img" => "kattle.png"),
-                        array("title" => "PRESSURE COOKERS", "link" => "", "img" => "cooker.png"),
-                        array("title" => "MATTRESS", "link" => "", "img" => "matress.png"),
-                        array("title" => "IRONS", "link" => "", "img" => "iron.png"),
-                        array("title" => "BOOMBOX", "link" => "", "img" => "boombox.png"),
-                        array("title" => "DVD PLAYERS", "link" => "", "img" => "dvdp.png"),
-                        array("title" => "WALL MOUNT", "link" => "", "img" => "wallm.png"),
+                        array("title" => "TV", "link" => site_url("product/productlist/1/143"), "img" => "tv.png"),
+                        array("title" => "AC", "link" => site_url("product/productlist/1/169"), "img" => "ac.png"),
+                        array("title" => "WASHING MACHINES", "link" => site_url("product/productlist/1/168"), "img" => "washing.png"),
+                        array("title" => "TOASTER", "link" => site_url("product/productlist/1/154"), "img" => "toaster.png"),
+                        array("title" => "FOOD PROCESSOR", "link" => site_url("product/productlist/1/161"), "img" => "foodp.png"),
+                        array("title" => "MICROWAVE OVEN", "link" => site_url("product/productlist/1/153"), "img" => "mvo.png"),
+                        array("title" => "BLENDERS", "link" => site_url("product/productlist/1/159"), "img" => "blender.png"),
+                        array("title" => "FANS", "link" => site_url("product/productlist/1/167"), "img" => "fans.png"),
+                        array("title" => "HIFI SYSTEM", "link" => site_url("product/productlist/1/148"), "img" => "hifi.png"),
+                        array("title" => "STOVES", "link" => site_url("product/productlist/1/156"), "img" => "stove.png"),
+                        array("title" => "OVEN", "link" => site_url("product/productlist/1/154"), "img" => "own.png"),
+                        array("title" => "KETTLE", "link" => site_url("product/productlist/1/143"), "img" => "kattle.png"),
+                        array("title" => "PRESSURE COOKERS", "link" => site_url("product/productlist/1/165"), "img" => "cooker.png"),
+                        array("title" => "MATTRESS", "link" => site_url("product/productlist/1/136"), "img" => "matress.png"),
+                        array("title" => "IRONS", "link" => site_url("product/productlist/1/166"), "img" => "iron.png"),
+                        array("title" => "BOOMBOX", "link" => site_url("product/productlist/1/148"), "img" => "boombox.png"),
+                        array("title" => "DVD PLAYERS", "link" => site_url("product/productlist/1/150"), "img" => "dvdp.png"),
+                        array("title" => "WALL MOUNT", "link" => site_url("product/productlist/1/152"), "img" => "wallm.png"),
                     ];
                     foreach ($categorylist as $key => $value) {
                         ?>
                         <li>
-                            <a href="#">
+                            <a href="<?php echo $value['link']; ?>">
                                 <img src="<?php echo base_url(); ?>assets/categoryblock/<?php echo $value['img']; ?>" alt="JSW <?php echo $value['title']; ?>">
                                 <h3 class="hideonmobile"><?php echo $value['title']; ?></h3>
                             </a>
@@ -285,12 +285,108 @@ $this->load->view('layout/header');
             </div>
 
 
+            <div class="fancy-title title-border">
+                <h4>Our Customers</h4>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-5">
+                    <a href="<?php echo site_url("product/productlist/1/131"); ?>"><img src="<?php echo base_url(); ?>assets/images/customers/5.jpg"  alt="Image"></a>
+                </div>
+                <div class="col-lg-7">
+
+                    <div class="row">
+                        <div class="col-lg-6 norightpadding" style="margin-bottom: 15px;">
+                            <a href="<?php echo site_url("product/productlist/1/168"); ?>"><img src="<?php echo base_url(); ?>assets/images/customers/1.jpg" alt="Image"></a>
+                        </div>
+                        <div class="col-lg-6 norightpadding" style="margin-bottom: 15px;">
+                            <a href="<?php echo site_url("product/productlist/1/168"); ?>"><img src="<?php echo base_url(); ?>assets/images/customers/3.jpg" alt="Image"></a>
+                        </div>
+                        <div class="col-lg-6 norightpadding" style="margin-bottom: 15px;">
+                            <a href="<?php echo site_url("product/productlist/1/133"); ?>"><img src="<?php echo base_url(); ?>assets/images/customers/2.jpg" alt="Image"></a>
+                        </div>
+                        <div class="col-lg-6 norightpadding" style="margin-bottom: 15px;">
+                            <a href="<?php echo site_url("product/productlist/1/133"); ?>"><img src="<?php echo base_url(); ?>assets/images/customers/4.jpg" alt="Image"></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="section parallax dark nobottommargin" style="background-image: url('images/services/home-testi-bg.jpg'); padding: 20px 0;" data-bottom-top="background-position:0px 300px;" data-top-bottom="background-position:0px -300px;">
+
+                <div class="heading-block center">
+                    <h3>What Clients Say?</h3>
+                </div>
+
+                <div class="fslider testimonial testimonial-full" data-animation="fade" data-arrows="false">
+                    <div class="flexslider">
+                        <div class="slider-wrap">
+                            <div class="slide">
+
+                                <div class="testi-content">
+                                    <p>
+                                        Best shoppe, best experience, best price, best place to buy your favourite JSW products...
+                                    </p>
+                                    <div class="testi-meta">
+                                        Kaydian Blair
+
+                                        <span>Saint Elizabeth, Jamaica</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+
+                                <div class="testi-content">
+                                    <p>
+                                        Get the best price of LG products and genuine product
+                                    </p>
+                                    <div class="testi-meta">
+                                        Demani Smith
+                                        <span>Pittsburgh, Pennsylvania</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container clearfix mt-40">
+            <div class="row">
+                <div class="col-lg-6">
+                    <video playsinline webkit-playsinline autoplay muted loop class="" style="width: 100%">
+
+                        <source src="<?php echo base_url(); ?>assets/homeblock/microwave.mp4" type="video/mp4">
+                    </video>                   
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="row">
+
+                        <div class="col-lg-12 norightpadding">
+                            <a href="<?php echo site_url("product/productlist/1/154"); ?>"><img src="<?php echo base_url(); ?>assets/homeblock/88.jpg" alt="Image"></a>
+                        </div>
+
+                    </div>
+
+                </div>
+                 
+
+
+            </div>
+
 
         </div>
 
 
 
-    
+
 
 
 

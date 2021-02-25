@@ -6,13 +6,20 @@ $this->load->view('layout/header');
         padding: 15px;
     }
 </style>
-<main id="content" role="main">
-    <div class="bg-img-hero mb-1" >
-        <div class="container" style="padding-top: 30px;">
-            <h2 class="text-center">Product Catalogs</h2>
+<section id="page-title" style="">
 
-        </div>
+    <div class="container clearfix">
+        <h1>Product Catalogs</h1>
+        <span>Get Amazed By Our Products</span>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Product Catalogs</li>
+        </ol>
     </div>
+
+</section><!
+<main id="content" role="main">
+    
 
     <div class="container ">
         <div class=" " style="display: block;

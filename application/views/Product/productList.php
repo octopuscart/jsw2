@@ -77,7 +77,10 @@ $image2 = "";
 <!-- ========== MAIN CONTENT ========== -->
 <main id="content" role="main" ng-controller="ProductController">
     <!-- breadcrumb -->
-    <section id="page-title" style="padding: 24px 0;    ">
+    <section id="page-title" style="padding: 24px 0;    background: #abbaab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #e9e9e9, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #e9e9e9, #dbd9d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
 
         <div class="container clearfix">
             <h1><?php echo $maincategory ? $maincategory['category_name'] : ""; ?></h1>
@@ -142,22 +145,22 @@ $image2 = "";
                         ];
                         foreach ($categorylist as $key => $value) {
                             ?>
-                                                    
-                                                                                            <div class="spost clearfix">
-                                                                                                <div class="entry-image">
-                                                                                                    <a href="#">
-                                                                                                        <img src="<?php echo base_url(); ?>assets/categoryblock/<?php echo $value['img']; ?>" alt="JSW <?php echo $value['title']; ?>">
-                                                    
-                                                                                                    </a>
-                                                                                                </div>
-                                                                                                <div class="entry-c">
-                                                                                                    <div class="entry-title">
-                                                                                                        <h4><a href="#"><?php echo $value['title']; ?></a></h4>
+                                                        
+                                                                                                <div class="spost clearfix">
+                                                                                                    <div class="entry-image">
+                                                                                                        <a href="#">
+                                                                                                            <img src="<?php echo base_url(); ?>assets/categoryblock/<?php echo $value['img']; ?>" alt="JSW <?php echo $value['title']; ?>">
+                                                        
+                                                                                                        </a>
                                                                                                     </div>
-                                                    
+                                                                                                    <div class="entry-c">
+                                                                                                        <div class="entry-title">
+                                                                                                            <h4><a href="#"><?php echo $value['title']; ?></a></h4>
+                                                                                                        </div>
+                                                        
+                                                                                                    </div>
                                                                                                 </div>
-                                                                                            </div>
-                                                    
+                                                        
                             <?php
                         }
                         ?>
@@ -191,7 +194,7 @@ $image2 = "";
                                         <div class="product-desc {{$index%2 == 0?'changedescolor':''}}" >
                                             <div class="row">
                                                 <div class="col-md-8"> 
-                                                    <div class="product-title"><h3><a href="#">{{product.title}}</a></h3></div>
+                                                    <div class="product-title"><h3><a href="<?php echo (site_url("Product/ProductDetails/")) ?>{{product.id}}">{{product.title}}</a></h3></div>
                                                     <div class="product-price"><ins>{{product.short_description}}</ins></div>
                                                     <div class="product-rating">
                                                         <i class="icon-star3"></i>
@@ -234,7 +237,10 @@ $image2 = "";
                                         <img class="img-responsive" style="width: 100%;" src="<?php echo base_url(); ?>assets/images/break.jpg"/>
 
                                     </div>
-                                </div>  
+                                </div>
+                                <div class="product  clearfix ">
+                                    <div class="changedescolorm2"></div>
+                                </div>
 
 
 

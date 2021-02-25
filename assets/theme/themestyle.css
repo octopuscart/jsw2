@@ -81,7 +81,7 @@
 }
 
 #top-bar{
-    background: #007bff;
+    /*background: #007bff;*/
     color: white;
 }
 
@@ -199,11 +199,16 @@
     min-height: 300px;
     background: #007bff;
     color:white;
-        padding: 15px;
+    padding: 15px;
+    /* fallback for old browsers */
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .product-1 .btn-link{
-        color: white;
+    color: white;
 }
 
 .product-1 .product-desc .product-title a{
@@ -217,6 +222,10 @@
 .product-1 .product-desc.changedescolor{
     background: #333333;
     color:#ffffff;
+    background: -webkit-linear-gradient(to left, #333333, #000); /* Chrome 10-25, Safari 5.1-6 */
+
+    background: linear-gradient(to left, #333333, #000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .product-1 .product-desc.changedescolor .product-title a{
@@ -244,4 +253,82 @@
 }
 .product-1 .rightproduct .product-image{
     float:right;
+}
+
+#page-title {
+    position: relative;
+    padding: 20px 0;
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #EEE;
+}
+
+#primary-menu ul li .mega-menu-content.style-2 ul.mega-menu-column > li.mega-menu-title > a {
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase !important;
+    margin-bottom: 3px;
+    color: #444;
+    padding: 0 !important;
+    line-height: 1.3 !important;
+}
+
+#primary-menu ul li .mega-menu-content.style-2 ul li > a {
+    padding-left: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.feature-box.fbox-plain.fbox-dark .fbox-icon i, .feature-box.fbox-plain.fbox-dark .fbox-icon img {
+    color: #fff;
+}
+.feature-box p {
+    margin: 8px 0 0 0;
+    color: #fff;
+}
+.feature-box h3 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.featureblock{
+    background: #007bff;
+    color: white;
+    padding: 35px 15px 15px 15px;
+    margin-right: 0;
+    min-height: 200px;
+}
+
+.featureblock-black{
+    background: #333333;
+}
+
+.bluegradiant{
+    color:#ffffff;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.blackgradiant{
+    background: #333333;
+    color:#ffffff;
+    background: -webkit-linear-gradient(to left, #333333, #000); /* Chrome 10-25, Safari 5.1-6 */
+
+    background: linear-gradient(to left, #333333, #000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#primary-menu ul li:hover > a, #primary-menu ul li.current > a {
+    color: #0f659c;
+}
+
+#primary-menu ul ul:not(.mega-menu-column), #primary-menu ul li .mega-menu-content {
+  
+    border-top: 2px solid #0b427e;
 }
