@@ -298,42 +298,7 @@ App.controller('ShopController', function ($scope, $http, $timeout, $interval, $
                 </div>`;
 
     $scope.prefetchdata = {};
-    $http.get(baseurl + "Api/prefetchdata.json").then(function (rdata) {
-        $scope.prefetchdata = rdata.data;
-        $timeout(function () {
-            equalHeight(); // Call Equal height function
-            var searchProducts = new Bloodhound({
-                initialize: false,
-                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
-                queryTokenizer: Bloodhound.tokenizers.whitespace,
-                identify: function (obj) {
-                    return obj.title;
-                },
-                prefetch: baseurl + "Api/prefetchdata.json",
-                remote: {
-                    url: baseurl + "Api/SearchSuggestApi?query=" + '%QUERY%',
-                    wildcard: '%QUERY%'
-                }
-            });
-
-            $('.typeahead').typeahead(null, {
-                name: 'search-products',
-                display: 'title',
-                limit: 8,
-//                source: substringMatcher($scope.prefetchdata),
-                source: searchProducts,
-                templates: {
-                    empty: [
-                        '<div class="empty-message">',
-                        "Can't Find!, Try Something Else",
-                        '</div>'
-                    ].join('\n'),
-                    suggestion: Handlebars.compile(templatesearch2)
-                }
-            });
-
-        }, 500);
-    })
+    
 
 
 
