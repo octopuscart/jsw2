@@ -362,7 +362,7 @@ $this->load->view('layout/header');
                 <div class="col-lg-6">
                     <video playsinline webkit-playsinline autoplay muted loop class="" style="width: 100%">
 
-                        <source src="<?php echo base_url(); ?>assets/homeblock/microwave.mp4" type="video/mp4">
+                        <source src="https://files.costcokart.com/microwave.mp4" type="video/mp4">
                     </video>                   
                 </div>
                 <div class="col-lg-6">
