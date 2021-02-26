@@ -367,9 +367,11 @@ where pa.product_id in ($productatrvalue) group by attribute_value_id";
         if ($user_id != 0) {
             $cartdata = $this->cartData($user_id);
             $product_details = $this->productDetails($product_id);
+            print_r($product_details);
             $product_dict = array(
                 'title' => $product_details['title'],
                 'price' => $product_details['price'],
+                'short_description' => $product_details['short_description'],
                 'sku' => $product_details['sku'],
                 'attrs' => "",
                 'vendor_id' => $product_details['user_id'],
@@ -419,6 +421,7 @@ where pa.product_id in ($productatrvalue) group by attribute_value_id";
                 $product_dict = array(
                     'title' => $product_details['title'],
                     'price' => $product_details['price'],
+                    'short_description' => $product_details['short_description'],
                     'sku' => $product_details['sku'],
                     'attrs' => "",
                     'vendor_id' => $product_details['user_id'],

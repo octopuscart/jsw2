@@ -90,10 +90,9 @@ App.controller('ShopController', function ($scope, $http, $timeout, $interval, $
             }
         }
         if (oper == 'add') {
-            if (productobj.quantity > 5) {
-            } else {
+           
                 productobj.quantity = Number(productobj.quantity) + 1;
-            }
+            
         }
         console.log(productobj.quantity)
         $http.get(globlecart + "Put/" + productobj.product_id + "/" + productobj.quantity).then(function (rdata) {
@@ -122,9 +121,9 @@ App.controller('ShopController', function ($scope, $http, $timeout, $interval, $
             swal.close();
             $scope.getCartData();
             swal({
-                title: 'Added To Cart',
+                title:  'Added To Enquiry List',
                 type: 'success',
-                html: "<p class='swalproductdetail'><span>" + rdata.data.title + "</span><br>" + "Total Price: " + currencyfilter(rdata.data.total_price, ' ' + globlecurrency + '  ') + ", Quantity: " + rdata.data.quantity + "</p>",
+                html: "<p class='swalproductdetail'><span>" + rdata.data.title + "</span><br>" +"</p>",
                 imageUrl: rdata.data.file_name,
                 imageWidth: 100,
                 timer: 1500,
@@ -138,6 +137,7 @@ App.controller('ShopController', function ($scope, $http, $timeout, $interval, $
                     },
                     function (dismiss) {
                         if (dismiss === 'timer') {
+                            $("#productInquire").modal("show");
                         }
                     }
             )
@@ -169,9 +169,9 @@ App.controller('ShopController', function ($scope, $http, $timeout, $interval, $
             swal.close();
             $scope.getCartData();
             swal({
-                title: 'Added To Cart',
+                title: 'Added To Enquiry List',
                 type: 'success',
-                html: "<p class='swalproductdetail'><span>" + rdata.data.title + "</span><br>" + "Total Price: " + currencyfilter(rdata.data.total_price, ' ' + globlecurrency + '  ') + ", Quantity: " + rdata.data.quantity + "</p>",
+                html: "<p class='swalproductdetail'><span>" + rdata.data.title + "</span><br>" +"</p>",
                 imageUrl: rdata.data.file_name,
                 imageWidth: 100,
                 timer: 1500,

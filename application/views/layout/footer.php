@@ -1,5 +1,141 @@
 <div style="clear: both"></div>
+<div class="modal fade" id="productInquire" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form  method="post" action="<?php echo site_url("Shop/enquiry");?>" >
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Product Inquiry</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="product-item__outer h-100">
+                        <div class="product-item__inner p-md-3 row no-gutters">
 
+
+                            <div class="cart-page-top table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <td class="cart-form-heading text_center" style="width: 50%" colspan="2">Product</td>
+                                            <td class="cart-form-heading text_center">Quantity</td>
+                                            <td class="cart-form-heading"></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="quantity-holder">
+                                        <tr ng-repeat="product in globleCartData.products">
+                                            <td class="cart-img-holder" style="       width: 80px;
+                                                text-align: center;">
+                                                <a href="#">
+                                                    <img  src="{{product.file_name}}" alt=""  alt="cart" class="img-responsive cart_image_block">
+                                                </a>
+                                            </td>
+                                            <td  style="    border-left: 0px;">
+                                                <h3 style="font-size: 15px;"><a href="#">{{product.title}}</a>
+                                                    <br/>
+                                                    <small style="font-size: 10px">{{product.short_description}}</small>
+                                                </h3>
+
+                                            </td>
+                                            <td class="quantity">
+
+                                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                                    <button type="button" class="btn btn-secondary"  ng-click="updateCart(product, 'add')"><i class="fa fa-plus" aria-hidden="true" ></i></button>
+                                                    <button type="button" class="btn btn-secondary">{{product.quantity}}</button>
+                                                    <button type="button" class="btn btn-secondary"  ng-click="updateCart(product, 'sub')"><i class="fa fa-minus" aria-hidden="true" ></i></button>
+                                                </div>
+
+
+                                            </td>
+                                            <td class="dismiss"><a href="#"  ng-click="removeCart(product.product_id)"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                        </tr>
+
+
+
+
+
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Input -->
+                                    <div class="js-form-message mb-4">
+                                        <label class="form-label">
+                                            NAME
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" name="name" placeholder=""  required="">
+                                    </div>
+                                    <!-- End Input -->
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Input -->
+                                    <div class="js-form-message mb-4">
+                                        <label class="form-label">
+                                            COMPANY NAME
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" name="company_name" placeholder="" >
+                                    </div>
+                                    <!-- End Input -->
+                                </div>
+
+                                <div class="col-md-6">
+                                    <!-- Input -->
+                                    <div class="js-form-message mb-4">
+                                        <label class="form-label">
+                                            EMAIL
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" name="email" placeholder="" required="">
+                                    </div>
+                                    <!-- End Input -->
+                                </div>
+
+                                <div class="col-md-6">
+                                    <!-- Input -->
+                                    <div class="js-form-message mb-4">
+                                        <label class="form-label">
+                                            CONTACT
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" name="contact_no" placeholder=""  required="">
+                                    </div>
+                                    <!-- End Input -->
+                                </div>
+
+
+                                <div class="col-md-12">
+                                    <div class="js-form-message mb-4">
+                                        <label class="form-label">
+                                            MESSAGE
+                                        </label>
+
+                                        <div class="input-group">
+                                            <textarea class="form-control p-5" rows="4" name="message" placeholder="" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" name="send_inquiry" class="btn btn-primary">Send Inquiry</button>
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <div class=" ">
     <div class="container-fluid clearfix mb-3 mt-40 ">
         <div class="row">
@@ -20,7 +156,7 @@
                         <i class="icon-box"></i>
                     </div>
                     <h3>OEM Products</h3>
-                      <hr/>
+                    <hr/>
                     <p class="notopmargin">We can customize product according to your requirement</p>
                 </div>
             </div>
@@ -31,7 +167,7 @@
                         <i class="icon-truck2"></i>
                     </div>
                     <h3>Shipping Globally</h3>
-                      <hr/>
+                    <hr/>
                     <p class="notopmargin">We can ship our products globally</p>
                 </div>
             </div>
@@ -42,7 +178,7 @@
                         <i class="icon-undo"></i>
                     </div>
                     <h3>24X7 Support </h3>
-                      <hr/>
+                    <hr/>
                     <p class="notopmargin">We offer 24X7 customer support. </p>
                 </div>
             </div>
@@ -222,7 +358,7 @@
         <div class="container clearfix">
 
             <div class="col_half">
-                Copyrights &copy; <?php echo date("Y"); ?> <span class='blankspace'>|</span> From the house of <b>Navrang Hong Kong Limited</b>.<br>
+                Copyrights &copy; <?php echo date("Y"); ?> <span class='blankspace'>|</span> JSW Electronics From the house of <b>Navrang Hong Kong Limited</b>.<br>
             </div>
 
             <div class="col_half col_last tright">

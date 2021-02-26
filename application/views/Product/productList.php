@@ -205,7 +205,7 @@ $image2 = "";
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4"> 
-                                                    <button class="btn btn-link" type="button"><i class="fa fa-plus"></i> Add To Enquiry</button>
+                                                    <button class="btn btn-link" type="button" ng-click="addToCart(product.id, 1);"><i class="fa fa-plus"></i> Add To Enquiry</button>
                                                     <a class="btn btn-link " type="button" target="_blank" style='color:green' href="https://wa.me/?text=<?php echo urlencode(site_url("Product/ProductDetails/")) ?>{{product.id}}">
                                                         <span class="fa-stack fa-lg">
                                                             <i class="fa fa-circle fa-stack-2x"></i>
