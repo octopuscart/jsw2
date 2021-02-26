@@ -142,26 +142,25 @@ class Shop extends CI_Controller {
                 $this->email->from(email_bcc, $sendername);
                 $this->email->to($this->input->post('email'));
                 $this->email->bcc(email_bcc);
-                $subjectt = "Thank you for your Feedback.";
+                $subjectt = "Thank you for your enquiry";
                 $subject = $subjectt;
                 $this->email->subject($subject);
-                $appointment['feedback'] = $feedback;
 
                 if (REPORT_MODE == 1) {
                     $this->email->message($htmlsmessage);
                     $this->email->print_debugger();
                     $send = $this->email->send();
                     if ($send) {
-                        redirect("feedback");
+                        redirect(site_url("/"));
                     } else {
-                        $error = $this->email->print_debugger(array('headers'));
-                        redirect("feedback");
+                   echo      $error = $this->email->print_debugger(array('headers'));
+                   //     redirect("site_url("/")");
                     }
                 } else {
                     echo $htmlsmessage;
                 }
             }
-            redirect("feedback");
+           // redirect(site_url("/"));
         }
     }
 

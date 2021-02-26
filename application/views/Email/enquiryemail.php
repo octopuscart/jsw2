@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Color Admin | Email Template - Newsletter</title>
+        <title> Email Template - Newsletter</title>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
         <meta content="" name="description" />
         <meta content="" name="author" />
