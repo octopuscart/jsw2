@@ -145,22 +145,22 @@ $image2 = "";
                         ];
                         foreach ($categorylist as $key => $value) {
                             ?>
-                                                                        
-                                                                                                                <div class="spost clearfix">
-                                                                                                                    <div class="entry-image">
-                                                                                                                        <a href="#">
-                                                                                                                            <img src="<?php echo base_url(); ?>assets/categoryblock/<?php echo $value['img']; ?>" alt="JSW <?php echo $value['title']; ?>">
-                                                                        
-                                                                                                                        </a>
-                                                                                                                    </div>
-                                                                                                                    <div class="entry-c">
-                                                                                                                        <div class="entry-title">
-                                                                                                                            <h4><a href="#"><?php echo $value['title']; ?></a></h4>
-                                                                                                                        </div>
-                                                                        
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                        
+                                                                                    
+                                                                                                                            <div class="spost clearfix">
+                                                                                                                                <div class="entry-image">
+                                                                                                                                    <a href="#">
+                                                                                                                                        <img src="<?php echo base_url(); ?>assets/categoryblock/<?php echo $value['img']; ?>" alt="JSW <?php echo $value['title']; ?>">
+                                                                                    
+                                                                                                                                    </a>
+                                                                                                                                </div>
+                                                                                                                                <div class="entry-c">
+                                                                                                                                    <div class="entry-title">
+                                                                                                                                        <h4><a href="#"><?php echo $value['title']; ?></a></h4>
+                                                                                                                                    </div>
+                                                                                    
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                    
                             <?php
                         }
                         ?>
@@ -181,7 +181,7 @@ $image2 = "";
                                 <div class="product  clearfix "  ng-repeat="(k, product) in productResults.products" ng-class="productautoheight">
                                     <div class="{{$index%2 == 0?'changedescolorm':'changedescolorm2'}}">
 
-                                        <div class="product-image " >
+                                        <div class="product-image " ng-click="selecteProduct(product)" data-toggle="modal" data-target="#productModal">
                                             <a href="#">
                                                 <img class="img-fluid product_image_set" src="<?php echo base_url(); ?>assets/images/defaultproduct.png" style="background-image:url(<?php echo PRODUCTIMAGELINK ?>{{product.file_name}});background-size: cover;background-size: contain;
                                                      background-repeat: no-repeat;
@@ -236,7 +236,10 @@ $image2 = "";
                                             </div>
                                             <div class="col-md-12 row featurelist" ng-if="product.varients">
                                                 Available {{product.variant_type}}:
-                                                <a href="#" class="tooltipsshow" data-toggle="tooltip" ng-repeat="(kv, vv) in product.varients" title="  <img src='<?php echo PRODUCTIMAGELINK ?>{{vv.file_name1}}' style='height:100px;'>">{{vv.variant_value}}</a>
+
+                                                <a tabindex="0" class="btn popoverinit btn-like" role="button" data-toggle="popover" data-trigger="focus"
+
+                                                   data-content="<img src='<?php echo PRODUCTIMAGELINK ?>{{vv.file_name1}}' style='width:300px;'>" ng-repeat="(kv, vv) in product.varients">{{vv.variant_value}}</a>
 
                                             </div>
 
@@ -246,7 +249,7 @@ $image2 = "";
                                         <?php
                                         if ($maincategory["image"]) {
                                             ?>
-                                            <img class="img-responsive" style="width: 100%;" src="<?php echo IMAGELINK.'media/'.$maincategory["image"]; ?>"/>
+                                            <img class="img-responsive" style="width: 100%;" src="<?php echo IMAGELINK . 'media/' . $maincategory["image"]; ?>"/>
 
                                             <?php
                                         } else {
@@ -279,6 +282,21 @@ $image2 = "";
             </div>
         </div>
     </section>
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">{{selectedProduct.product.title}}</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                </div>
+                <div class="modal-body" style="text-align: center;">
+                    <img class="img-fluid product_image_set" src="<?php echo PRODUCTIMAGELINK ?>{{selectedProduct.product.file_name}}"   alt="Image Description"/>  
+                </div>
+
+            </div>
+        </div>
+    </div>
 </main>
 <!-- ========== END MAIN CONTENT ========== -->
 

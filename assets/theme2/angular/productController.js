@@ -5,7 +5,10 @@ App.controller('ProductController', function ($scope, $http, $timeout, $interval
 
     $scope.selectedProduct = {'product': {}};
 
-
+    $scope.selecteProduct = function(productobj){
+        console.log(productobj);
+        $scope.selectedProduct.product = productobj;
+    }
 
 
 
