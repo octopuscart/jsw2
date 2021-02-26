@@ -358,7 +358,7 @@
         <div class="container clearfix">
             <div class='row'>
                 <div class="col-md-8">
-                    Copyrights &copy; <?php echo date("Y"); ?> <span class='blankspace'>|</span> JSW Electronics From the house of <b>Navrang Hong Kong Limited</b>.<br>
+                    Copyrights &copy; <?php echo date("Y"); ?> <span class='blankspace'>|</span> <b>JSW Electronics</b> from the house of <b>Navrang Hong Kong Limited</b>.<br>
                 </div>
 
                 <div class="col-md-4  tright">
