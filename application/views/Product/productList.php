@@ -78,9 +78,9 @@ $image2 = "";
 <main id="content" role="main" ng-controller="ProductController">
     <!-- breadcrumb -->
     <section id="page-title" style="padding: 24px 0;    background: #abbaab;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #e9e9e9, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #e9e9e9, #dbd9d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-">
+             background: -webkit-linear-gradient(to right, #e9e9e9, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+             background: linear-gradient(to right, #e9e9e9, #dbd9d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+             ">
 
         <div class="container clearfix">
             <h1><?php echo $maincategory ? $maincategory['category_name'] : ""; ?></h1>
@@ -145,22 +145,22 @@ background: linear-gradient(to right, #e9e9e9, #dbd9d9); /* W3C, IE 10+/ Edge, F
                         ];
                         foreach ($categorylist as $key => $value) {
                             ?>
-                                                        
-                                                                                                <div class="spost clearfix">
-                                                                                                    <div class="entry-image">
-                                                                                                        <a href="#">
-                                                                                                            <img src="<?php echo base_url(); ?>assets/categoryblock/<?php echo $value['img']; ?>" alt="JSW <?php echo $value['title']; ?>">
-                                                        
-                                                                                                        </a>
-                                                                                                    </div>
-                                                                                                    <div class="entry-c">
-                                                                                                        <div class="entry-title">
-                                                                                                            <h4><a href="#"><?php echo $value['title']; ?></a></h4>
-                                                                                                        </div>
-                                                        
-                                                                                                    </div>
-                                                                                                </div>
-                                                        
+                                                                        
+                                                                                                                <div class="spost clearfix">
+                                                                                                                    <div class="entry-image">
+                                                                                                                        <a href="#">
+                                                                                                                            <img src="<?php echo base_url(); ?>assets/categoryblock/<?php echo $value['img']; ?>" alt="JSW <?php echo $value['title']; ?>">
+                                                                        
+                                                                                                                        </a>
+                                                                                                                    </div>
+                                                                                                                    <div class="entry-c">
+                                                                                                                        <div class="entry-title">
+                                                                                                                            <h4><a href="#"><?php echo $value['title']; ?></a></h4>
+                                                                                                                        </div>
+                                                                        
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                        
                             <?php
                         }
                         ?>
@@ -228,13 +228,34 @@ background: linear-gradient(to right, #e9e9e9, #dbd9d9); /* W3C, IE 10+/ Edge, F
                                                         <li ng-repeat="feature1 in product.feature[1]"><i class="icon-caret-right"></i> {{feature1}}</li>
 
                                                     </ul>
+
+                                                    <!-- HTML to write -->
+
+
                                                 </div>
+                                            </div>
+                                            <div class="col-md-12 row featurelist" ng-if="product.varients">
+                                                Available {{product.variant_type}}:
+                                                <a href="#" class="tooltipsshow" data-toggle="tooltip" ng-repeat="(kv, vv) in product.varients" title="  <img src='<?php echo PRODUCTIMAGELINK ?>{{vv.file_name1}}' style='height:100px;'>">{{vv.variant_value}}</a>
+
                                             </div>
 
                                         </div>
                                     </div>
                                     <div ng-if="$index == 2" >
-                                        <img class="img-responsive" style="width: 100%;" src="<?php echo base_url(); ?>assets/images/break.jpg"/>
+                                        <?php
+                                        if ($maincategory["image"]) {
+                                            ?>
+                                            <img class="img-responsive" style="width: 100%;" src="<?php echo IMAGELINK.'media/'.$maincategory["image"]; ?>"/>
+
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <img class="img-responsive" style="width: 100%;" src="<?php echo base_url(); ?>assets/images/break.jpg"/>
+
+                                            <?php
+                                        }
+                                        ?>
 
                                     </div>
                                 </div>

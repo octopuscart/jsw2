@@ -329,6 +329,20 @@
 }
 
 #primary-menu ul ul:not(.mega-menu-column), #primary-menu ul li .mega-menu-content {
-  
+
     border-top: 2px solid #0b427e;
 }
+
+a.tooltipsshow {
+    color: white;
+    margin-right: 5px;
+    padding: 0px 5px;
+    margin-left: 5px;
+}
+
+.tooltip-inner {
+    background-color: white !important;  
+    opacity: 1; 
+}
+.tooltip.in {  opacity: 1;  filter: alpha(opacity=100);}
+a.tooltip:hover span { display: block; background-color:white; }

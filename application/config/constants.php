@@ -32,6 +32,7 @@ switch ($baselink) {
 
 define('ADMINURL', $adminlinkmain);
 define('PRODUCTIMAGELINK', "https://jswadmin.costcointernational.com/assets/product_images/");
+define('IMAGELINK', "https://jswadmin.costcointernational.com/assets/");
 
 
 

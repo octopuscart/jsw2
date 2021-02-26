@@ -118,9 +118,12 @@ App.controller('ProductController', function ($scope, $http, $timeout, $interval
             }
 
 
-          
+            $timeout(function () {
+                $('.tooltipsshow').tooltip({html: true})
+            }, 3000);
 
-    
+
+
 
             $scope.init = 1;
         }, function () {
