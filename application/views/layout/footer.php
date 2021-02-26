@@ -2,7 +2,7 @@
 <div class="modal fade" id="productInquire" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <form  method="post" action="<?php echo site_url("Shop/enquiry");?>" >
+            <form  method="post" action="<?php echo site_url("Shop/enquiry"); ?>" >
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Product Inquiry</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -356,43 +356,43 @@
     <div id="copyrights" class="bluegradiant">
 
         <div class="container clearfix">
+            <div class='row'>
+                <div class="col-md-8">
+                    Copyrights &copy; <?php echo date("Y"); ?> <span class='blankspace'>|</span> JSW Electronics From the house of <b>Navrang Hong Kong Limited</b>.<br>
+                </div>
 
-            <div class="col_half">
-                Copyrights &copy; <?php echo date("Y"); ?> <span class='blankspace'>|</span> JSW Electronics From the house of <b>Navrang Hong Kong Limited</b>.<br>
-            </div>
-
-            <div class="col_half col_last tright">
-                <div class="fright clearfix">
-                    <a href="#" class="social-icon si-small si-borderless si-facebook">
-                        <i class="icon-facebook"></i>
-                        <i class="icon-facebook"></i>
-                    </a>
-                    <a href="#" class="social-icon si-small si-borderless si-instagram">
-                        <i class="icon-instagram"></i>
-                        <i class="icon-instagram"></i>
-                    </a>
+                <div class="col-md-4  tright">
+                    <div class="fright clearfix">
+                        <a href="#" class="social-icon si-small si-borderless si-facebook">
+                            <i class="icon-facebook"></i>
+                            <i class="icon-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon si-small si-borderless si-instagram">
+                            <i class="icon-instagram"></i>
+                            <i class="icon-instagram"></i>
+                        </a>
 
 
-                    <a href="#" class="social-icon si-small si-borderless si-twitter">
-                        <i class="icon-twitter"></i>
-                        <i class="icon-twitter"></i>
-                    </a>
+                        <a href="#" class="social-icon si-small si-borderless si-twitter">
+                            <i class="icon-twitter"></i>
+                            <i class="icon-twitter"></i>
+                        </a>
 
-                    <a href="#" class="social-icon si-small si-borderless si-youtube">
-                        <i class="icon-youtube"></i>
-                        <i class="icon-youtube"></i>
-                    </a>
+                        <a href="#" class="social-icon si-small si-borderless si-youtube">
+                            <i class="icon-youtube"></i>
+                            <i class="icon-youtube"></i>
+                        </a>
+
+
+
+                    </div>
+
+                    <div class="clear"></div>
 
 
 
                 </div>
-
-                <div class="clear"></div>
-
-
-
             </div>
-
         </div>
 
     </div><!-- #copyrights end -->
@@ -400,7 +400,6 @@
 </footer><!-- #footer end -->
 
 </div><!-- #wrapper end -->
-<i class="icon-arrow-left"></i>
 <!-- Go To Top
 ============================================= -->
 <div id="gotoTop" class="icon-angle-up"></div>
