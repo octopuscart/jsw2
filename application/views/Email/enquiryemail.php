@@ -1599,7 +1599,7 @@ Thank you for your enquiry</h4>
                                     <table class=" columns">
                                         <tr>
                                             <td>
-                                                Copyrights &copy; <?php echo date("Y"); ?> <span class='blankspace'>|</span> From the house of <b>Navrang Hong Kong Limited</b>.<br>
+                                                Copyrights &copy; <?php echo date("Y"); ?> <span class='blankspace'>|</span>JSW Electronics From the house of <b>Navrang Hong Kong Limited</b>.<br>
 
                                             </td>
                                             <td class="expander"></td>
