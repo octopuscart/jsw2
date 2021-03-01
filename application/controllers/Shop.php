@@ -65,22 +65,24 @@ class Shop extends CI_Controller {
                 $htmlsmessage = $this->load->view('Email/web_enquiry', $web_enquiry, true);
 
                 if ($this->input->post('email')) {
-                    $this->email->message($htmlsmessage);
+                    if (REPORT_MODE == 1) {
+                        $this->email->message($htmlsmessage);
 
-                    $this->email->print_debugger();
-                    $send = $this->email->send();
-                    if ($send) {
-                        echo json_encode("send");
+                        $this->email->print_debugger();
+                        $send = $this->email->send();
+                        if ($send) {
+                            echo json_encode("send");
+                        } else {
+                            $error = $this->email->print_debugger(array('headers'));
+                            echo json_encode($error);
+                        }
                     } else {
-                        $error = $this->email->print_debugger(array('headers'));
-                        echo json_encode($error);
+                        echo $htmlsmessage;
                     }
-                } else {
-                    echo $htmlsmessage;
                 }
             }
 
-            redirect('Shop/contactus');
+             redirect('Shop/contactus');
         }
         $this->load->view('pages/contactus');
     }
@@ -261,7 +263,7 @@ class Shop extends CI_Controller {
                 if ($this->input->post('email')) {
                     $this->email->set_newline("\r\n");
                     $this->email->from(email_bcc, $sendername);
-                     $this->email->bcc(email_bcc);
+                    $this->email->bcc(email_bcc);
                     $this->email->to($this->input->post('email'));
                     $subjectt = "Thank you for your subscription";
                     $orderlog = array(

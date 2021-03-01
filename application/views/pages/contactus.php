@@ -27,8 +27,8 @@ $this->load->view('layout/header');
                     <div class="border-bottom border-color-1 mb-5">
                         <h3 class="section-title mb-0 pb-2 font-size-25">Leave us a Message</h3>
                     </div>
-                    <p class="max-width-830-xl text-gray-90">We are manufacturers and distributors of electronics worldwide! We have various brands that we have been manufacturing for OEM and ODM for the last 13 years!We have our own in house brand called JSW which we have recently started marketing and have a variety of products under the same label.We are currently looking for partners worldwide for our brand representation and distribution.</p>
-                    <form class="js-validate" novalidate="novalidate">
+                    <p class="max-width-830-xl text-gray-90">We are manufacturers and distributors of electronics worldwide! We have various brands that we have been manufacturing for OEM and ODM for the last 13 years! We have our own in house brand called JSW which we have recently started marketing and have a variety of products under the same label. We are currently looking for partners worldwide for our brand representation and distribution.</p>
+                    <form action="#" method="post">
                         <div class="row">
                             <div class="col-md-6">
                                 <!-- Input -->
@@ -37,7 +37,7 @@ $this->load->view('layout/header');
                                         First name
                                         <span class="text-danger">*</span>
                                     </label>
-                                    <input type="text" class="form-control" name="firstName" placeholder="" aria-label="" required="" data-msg="Please enter your frist name." data-error-class="u-has-error" data-success-class="u-has-success" autocomplete="off">
+                                    <input type="text" class="form-control" name="first_name" placeholder="" aria-label="" required="" data-msg="Please enter your frist name." data-error-class="u-has-error" data-success-class="u-has-success" autocomplete="off">
                                 </div>
                                 <!-- End Input -->
                             </div>
@@ -49,7 +49,31 @@ $this->load->view('layout/header');
                                         Last name
                                         <span class="text-danger">*</span>
                                     </label>
-                                    <input type="text" class="form-control" name="lastName" placeholder="" aria-label="" required="" data-msg="Please enter your last name." data-error-class="u-has-error" data-success-class="u-has-success">
+                                    <input type="text" class="form-control" name="last_name" placeholder="" aria-label="" required="" data-msg="Please enter your last name." data-error-class="u-has-error" data-success-class="u-has-success">
+                                </div>
+                                <!-- End Input -->
+                            </div>
+                            
+                              <div class="col-md-6">
+                                <!-- Input -->
+                                <div class="js-form-message mb-4">
+                                    <label class="form-label">
+                                       Contact no.
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" name="contact" placeholder="" aria-label="" required="" data-msg="Please enter your frist name." data-error-class="u-has-error" data-success-class="u-has-success" autocomplete="off">
+                                </div>
+                                <!-- End Input -->
+                            </div>
+
+                            <div class="col-md-6">
+                                <!-- Input -->
+                                <div class="js-form-message mb-4">
+                                    <label class="form-label">
+                                        Email
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" name="email" placeholder="" aria-label="" required="" data-msg="Please enter your last name." data-error-class="u-has-error" data-success-class="u-has-success">
                                 </div>
                                 <!-- End Input -->
                             </div>
@@ -60,7 +84,7 @@ $this->load->view('layout/header');
                                     <label class="form-label">
                                         Subject
                                     </label>
-                                    <input type="text" class="form-control" name="Subject" placeholder="" aria-label="" data-msg="Please enter subject." data-error-class="u-has-error" data-success-class="u-has-success">
+                                    <input type="text" class="form-control" name="subject" placeholder="" aria-label="" data-msg="Please enter subject." data-error-class="u-has-error" data-success-class="u-has-success">
                                 </div>
                                 <!-- End Input -->
                             </div>
@@ -71,13 +95,13 @@ $this->load->view('layout/header');
                                     </label>
 
                                     <div class="input-group">
-                                        <textarea class="form-control p-5" rows="4" name="text" placeholder=""></textarea>
+                                        <textarea class="form-control p-5" rows="4" name="message" placeholder=""></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-primary-dark-w px-5">Send Message</button>
+                            <button type="submit" name="sendmessage" class="btn btn-primary-dark-w px-5">Send Message</button>
                         </div>
                     </form>
                 </div>
@@ -94,8 +118,8 @@ $this->load->view('layout/header');
                         <div class="">Email: <a class="text-blue text-decoration-on" href="">navrang@netvigator.com</a></div>
                     </address>
                     <h5 class="font-size-14 font-weight-bold mb-3">Opening Hours</h5>
-                    <div class="">Monday to Friday: 9am-9pm</div>
-                    <div class="mb-6">Saturday to Sunday: 9am-11pm</div>
+                    <div class="">Monday to Friday: 09:00 AM - 09:00 PM</div>
+                    <div class="mb-6">Saturday to Sunday: 09:00 AM - 11:00 PM</div>
                 </div>
                 <div class="" style="height: 500px;margin-top: 50px">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7383.50200913203!2d114.148244!3d22.28742!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3fc7db1e3e305b1b!2sGolden%20Sun%20Centre!5e0!3m2!1sen!2sin!4v1613663215631!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
