@@ -153,14 +153,14 @@ class Shop extends CI_Controller {
                     if ($send) {
                         redirect(site_url("/"));
                     } else {
-                   echo      $error = $this->email->print_debugger(array('headers'));
-                   //     redirect("site_url("/")");
+                        echo $error = $this->email->print_debugger(array('headers'));
+                        //     redirect("site_url("/")");
                     }
                 } else {
                     echo $htmlsmessage;
                 }
             }
-           // redirect(site_url("/"));
+            // redirect(site_url("/"));
         }
     }
 
@@ -244,6 +244,55 @@ class Shop extends CI_Controller {
             redirect("feedback");
         }
         $this->load->view('pages/feedback');
+    }
+
+    public function subscribe() {
+        if (isset($_POST['submit'])) {
+
+            $emailsender = email_sender;
+            $sendername = email_sender_name;
+            $email_bcc = email_bcc;
+
+            $captchatext = $this->session->userdata("captchacode_subscribe");
+            $checkcaptcha = $this->input->post("captcha");
+            $appointment["email"] = $this->input->post('email');
+
+            if (1) {
+                if ($this->input->post('email')) {
+                    $this->email->set_newline("\r\n");
+                    $this->email->from(email_bcc, $sendername);
+                    $this->email->to($this->input->post('email'));
+                    $subjectt = "Thank you for your subscription";
+                    $orderlog = array(
+                        'log_type' => 'Thank You For Subscribing',
+                        'log_datetime' => date('Y-m-d H:i:s'),
+                        'user_id' => 'Subscribing User',
+                        'log_detail' => "  " . $subjectt
+                    );
+                    $this->db->insert('system_log', $orderlog);
+                    $subject = $subjectt;
+                    $this->email->subject($subject);
+                    $appointment['appointment'] = $appointment;
+                    $htmlsmessage = $this->load->view('Email/subscribing', $appointment, true);
+                    if (REPORT_MODE == 1) {
+                        $this->email->message($htmlsmessage);
+                        $this->email->print_debugger();
+                        $send = $this->email->send();
+                        if ($send) {
+                            redirect(site_url("/"));
+                        } else {
+                            $error = $this->email->print_debugger(array('headers'));
+                            redirect(site_url("/"));
+                        }
+                    } else {
+                        echo $htmlsmessage;
+                    }
+                }
+            } else {
+                redirect(site_url("/"));
+            }
+        }
+//        $this->load->view('Pages/subscribe');
     }
 
     function testDate() {

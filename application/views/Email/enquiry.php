@@ -145,7 +145,8 @@
                 </tr>
                 <tr>
                     <th style="text-align: right;width:200px;padding-right: 10px;">Contact No.</th>
-                    <td style="    text-align: left; color:black!important; "><?php echo $booking_order['contact']; ?></td>
+                    <td style="    text-align: left; color:black!important; "><?php echo $booking_order[' '
+                        . '.3']; ?></td>
                 </tr>
                 <tr>
                     <th style="text-align: right;width:200px;padding-right: 10px;">Message</th>

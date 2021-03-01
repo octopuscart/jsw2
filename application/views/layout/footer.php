@@ -50,12 +50,6 @@
                                             </td>
                                             <td class="dismiss"><a href="#"  ng-click="removeCart(product.product_id)"><i class="fa fa-times" aria-hidden="true"></i></a></td>
                                         </tr>
-
-
-
-
-
-
                                     </tbody>
                                 </table>
 
@@ -213,9 +207,8 @@
                                 59/67 Bonham Strand West,<br/>
                                 Sheung Wan, Hong Kong
                             </address>
-
-                            <abbr title="Email Address"><strong>Email:</strong></abbr> info@jswelectronics.com <br/>
                             <abbr title="Email Address"><strong>Email:</strong></abbr>  navrang@netvigator.com
+                            <abbr title="Email Address"><strong>Email:</strong></abbr> sales@jswelectronics.com <br/>
                         </div>
 
                     </div>
@@ -306,17 +299,17 @@
 
                 </div>
 
-                <div class="widget subscribe-widget clearfix">
+                <div class="widget subscribe-widget2 clearfix">
                     <h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
                     <div class="widget-subscribe-form-result"></div>
-                    <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
+                    <form action="<?php echo site_url("Shop/subscribe");?>" method="post" class="nobottommargin">
                         <div class="input-group divcenter">
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="icon-email2"></i></div>
                             </div>
-                            <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+                            <input type="email" id="widget-subscribe-form-email" name="email" class="form-control required email" placeholder="Enter your Email" required="">
                             <div class="input-group-append">
-                                <button class="btn btn-success btn-orange" type="submit">Subscribe</button>
+                                <button class="btn btn-success btn-orange" type="submit" name="submit">Subscribe</button>
                             </div>
                         </div>
                     </form>
