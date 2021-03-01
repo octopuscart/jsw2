@@ -234,7 +234,7 @@ $image2 = "";
 
                                                 </div>
                                             </div>
-                                            <div class="col-md-12 row featurelist" ng-if="product.varients">
+                                            <div class="col-md-12 row featurelist" style="    line-height: 37px;" ng-if="product.varients">
                                                 Available {{product.variant_type}}:
 
                                                 <a tabindex="0" class="btn popoverinit btn-link" role="button" data-toggle="popover" data-trigger="focus"

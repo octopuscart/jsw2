@@ -17,7 +17,7 @@ $this->load->view('layout/header');
         </ol>
     </div>
 
-</section><!
+</section>
 <main id="content" role="main">
     
 
