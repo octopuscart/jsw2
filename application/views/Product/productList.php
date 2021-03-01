@@ -177,16 +177,16 @@ $image2 = "";
                         <div class="col-md-12 ">
 
 
-                            <div id="shop" class="shop product-1 grid-container clearfix" >
-                                <div class="product  clearfix "  ng-repeat="(k, product) in productResults.products" ng-class="productautoheight">
+                            <div id="shop" class="shop product-1 " >
+                                <div class="product   "  ng-repeat="(k, product) in productResults.products" ng-class="productautoheight">
                                     <div class="{{$index%2 == 0?'changedescolorm':'changedescolorm2'}}">
 
                                         <div class="product-image " ng-click="selecteProduct(product)" data-toggle="modal" data-target="#productModal">
-                                            <a href="#">
+                                         
                                                 <img class="img-fluid product_image_set" src="<?php echo base_url(); ?>assets/images/defaultproduct.png" style="background-image:url(<?php echo PRODUCTIMAGELINK ?>{{product.file_name}});background-size: cover;background-size: contain;
                                                      background-repeat: no-repeat;
                                                      background-position: center;"   alt="Image Description"/>  
-                                            </a>
+                                          
 
 
 
@@ -237,7 +237,7 @@ $image2 = "";
                                             <div class="col-md-12 row featurelist" ng-if="product.varients">
                                                 Available {{product.variant_type}}:
 
-                                                <a tabindex="0" class="btn popoverinit btn-like" role="button" data-toggle="popover" data-trigger="focus"
+                                                <a tabindex="0" class="btn popoverinit btn-link" role="button" data-toggle="popover" data-trigger="focus"
 
                                                    data-content="<img src='<?php echo PRODUCTIMAGELINK ?>{{vv.file_name1}}' style='width:300px;'>" ng-repeat="(kv, vv) in product.varients">{{vv.variant_value}}</a>
 

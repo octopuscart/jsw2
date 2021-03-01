@@ -122,7 +122,7 @@ App.controller('ProductController', function ($scope, $http, $timeout, $interval
 
 
             $timeout(function () {
-                $('.tooltipsshow').tooltip({html: true})
+                $('.popoverinit').popover({html:true, trigger:'hover'})
             }, 3000);
 
 

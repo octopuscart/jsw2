@@ -132,7 +132,7 @@ class Shop extends CI_Controller {
 
 
 
-            $htmlsmessage = $this->load->view('Email/enquiryemail', $data, true);
+            $htmlsmessage = $this->load->view('Email/enquiry', $data, true);
             $emailsender = email_sender;
             $sendername = email_sender_name;
             $email_bcc = email_bcc;

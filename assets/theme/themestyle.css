@@ -337,3 +337,12 @@
     color: blue;
     font-size: 15px;
 }
+
+.product-1 .product:last-child {
+    /* border-bottom: 1px solid #000; */
+    margin: 23px 0 0px 0!important;
+}
+
+a.btn.popoverinit {
+    color: white;
+}
