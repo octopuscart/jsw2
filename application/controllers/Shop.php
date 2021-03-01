@@ -261,6 +261,7 @@ class Shop extends CI_Controller {
                 if ($this->input->post('email')) {
                     $this->email->set_newline("\r\n");
                     $this->email->from(email_bcc, $sendername);
+                     $this->email->bcc(email_bcc);
                     $this->email->to($this->input->post('email'));
                     $subjectt = "Thank you for your subscription";
                     $orderlog = array(
