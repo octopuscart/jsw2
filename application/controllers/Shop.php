@@ -45,6 +45,7 @@ class Shop extends CI_Controller {
                 $this->email->set_newline("\r\n");
                 $this->email->from(email_bcc, $sendername);
                 $this->email->to($this->input->post('email'));
+                $this->email->bcc(email_bcc);
 
                 $subjectt = $this->input->post('subject');
                 $orderlog = array(
