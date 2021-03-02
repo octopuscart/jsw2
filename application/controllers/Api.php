@@ -193,7 +193,7 @@ class Api extends REST_Controller {
 
         $pricecount = [];
 
-        $productListFinal1 = array_slice($product_result, $startpage, 16);
+        $productListFinal1 = $product_result; // array_slice($product_result, $startpage, 16);
 
         foreach ($productListFinal1 as $key => $value) {
 
