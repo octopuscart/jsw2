@@ -15,15 +15,6 @@ $this->load->view('layout/header');
             <ul>  
 
 
-                <li data-transition="fade" data-slotamount="13" data-masterspeed="300" data-delay="15000" data-title="INTRODUCTION" >
-
-                    <video playsinline webkit-playsinline autoplay muted loop class="fullvideo">
-                        <source src="https://files.costcokart.com/jswvideos3.mp4" type="video/mp4">
-                    </video>
-
-
-
-                </li>
 
 
                 <!-- SLIDE  -->
